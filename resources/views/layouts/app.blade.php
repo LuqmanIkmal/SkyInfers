@@ -1,19 +1,90 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'SkyInfers - Digital Marketing Agency')</title>
-    <meta name="description" content="@yield('description', 'SkyInfers crafts high-performance web experiences.')">
+
+    {{-- ── Primary SEO ── --}}
+    <title>@yield('title', 'SkyInfers — Digital Marketing Agency in Johor Bahru, Malaysia')</title>
+    <meta name="description" content="@yield('description', 'SkyInfers is a digital marketing agency in Johor Bahru offering content creation, web design and custom system development to grow your business online.')">
+    <meta name="keywords"    content="@yield('keywords', 'digital marketing agency johor bahru, web design malaysia, content creation malaysia, system development, social media marketing johor bahru, skyinfers')">
+    <meta name="author"      content="SkyInfers">
+    <meta name="robots"      content="index, follow">
+    <link rel="canonical"    href="@yield('canonical', url()->current())">
+
+    {{-- ── Open Graph (Facebook / WhatsApp / LinkedIn) ── --}}
+    <meta property="og:type"        content="website">
+    <meta property="og:site_name"   content="SkyInfers">
+    <meta property="og:title"       content="@yield('og_title', 'SkyInfers — Digital Marketing Agency in Johor Bahru')">
+    <meta property="og:description" content="@yield('og_description', 'Content creation, web design and system development — all under one roof. Based in Johor Bahru, Malaysia.')">
+    <meta property="og:url"         content="@yield('canonical', url()->current())">
+    <meta property="og:image"       content="@yield('og_image', asset('images/og-image.jpg'))">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale"      content="en_MY">
+
+    {{-- ── Twitter Card ── --}}
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="@yield('og_title', 'SkyInfers — Digital Marketing Agency in Johor Bahru')">
+    <meta name="twitter:description" content="@yield('og_description', 'Content creation, web design and system development — all under one roof.')">
+    <meta name="twitter:image"       content="@yield('og_image', asset('images/og-image.jpg'))">
+
+    {{-- ── JSON-LD: LocalBusiness (sitewide) ── --}}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "SkyInfers",
+        "description": "Digital marketing agency in Johor Bahru offering content creation, web design and custom system development.",
+        "url": "{{ config('app.url') }}",
+        "logo": "{{ asset('images/favicon.png') }}",
+        "image": "{{ asset('images/og-image.jpg') }}",
+        "telephone": "+60117-023-7694",
+        "email": "info@skyinfers.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Johor Bahru",
+            "addressRegion": "Johor",
+            "addressCountry": "MY"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Malaysia"
+        },
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "sameAs": [
+            "https://www.instagram.com/skyinfers",
+            "https://www.facebook.com/skyinfers",
+            "https://www.linkedin.com/company/skyinfers"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Digital Marketing Services",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Marketing" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "System Development" } }
+            ]
+        }
+    }
+    </script>
+
+    {{-- ── Page-specific JSON-LD ── --}}
+    @stack('jsonld')
+
+    {{-- ── Favicon ── --}}
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+
+    {{-- ── Fonts ── --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-[#080a0f] text-[#e8eaf0] antialiased overflow-x-hidden" style="font-family:'DM Sans',sans-serif;">
-<style>
-  @media(hover:hover){body{cursor:none;}}
-  @media(hover:none){#cursor{display:none;}}
-</style>
+<body class="bg-[#080a0f] text-[#e8eaf0] antialiased overflow-x-hidden" style="cursor:none; font-family:'DM Sans',sans-serif;">
 
     {{-- Custom Cursor --}}
     <div id="cursor" style="position:fixed;top:0;left:0;z-index:9999;pointer-events:none;">
@@ -49,40 +120,16 @@
             </li>
         @endforeach
         </ul>
-        <a href="#cta" class="hidden md:inline-block" style="background:#4f8eff;color:#fff;padding:10px 24px;border-radius:8px;font-size:.9rem;font-weight:600;text-decoration:none;transition:all .2s;" onmouseover="this.style.background='#3a7bef'" onmouseout="this.style.background='#4f8eff'">
+        <a href="#cta" style="background:#4f8eff;color:#fff;padding:10px 24px;border-radius:8px;font-size:.9rem;font-weight:600;text-decoration:none;transition:all .2s;" onmouseover="this.style.background='#3a7bef'" onmouseout="this.style.background='#4f8eff'">
             Free Consultation
         </a>
-        <button id="hamburger" class="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8 p-1 z-[60] relative" aria-label="Menu">
-            <span class="ham-line block h-[2px] w-full bg-[#e8eaf0] rounded transition-all duration-300"></span>
-            <span class="ham-line block h-[2px] w-full bg-[#e8eaf0] rounded transition-all duration-300"></span>
-            <span class="ham-line block h-[2px] w-full bg-[#e8eaf0] rounded transition-all duration-300"></span>
-        </button>
     </nav>
-
-    {{-- Mobile Menu --}}
-    <div id="mobileMenu" class="fixed inset-0 z-40 flex flex-col items-center justify-center gap-0 transition-all duration-300"
-         style="background:rgba(8,10,15,0.97);backdrop-filter:blur(20px);display:none !important;">
-        @foreach([
-            [url('/'),         '',         'HOME'],
-            [url('/services'), 'services', 'SERVICES'],
-            [url('/about'),    'about',    'ABOUT'],
-            [url('/projects'), 'projects', 'PROJECTS'],
-            [url('/contact'),  'contact',  'CONTACT'],
-        ] as [$href, $route, $label])
-        <a href="{{ $href }}" class="w-full text-center py-5 border-b border-white/[0.05] font-syne font-bold tracking-widest text-2xl no-underline transition-colors duration-200"
-           style="color:{{ (request()->is($route) || ($route==='' && request()->is('/'))) ? '#ffffff' : '#6b7280' }};"
-           onmouseover="this.style.color='#fff'" onmouseout="this.style.color='{{ (request()->is($route) || ($route==='' && request()->is('/'))) ? '#ffffff' : '#6b7280' }}'">
-            {{ $label }}
-        </a>
-        @endforeach
-        <a href="#cta" class="mt-8 px-10 py-4 rounded-xl font-syne font-bold text-white no-underline text-base" style="background:#4f8eff;">Free Consultation</a>
-    </div>
 
     @yield('content')
 
     {{-- Footer --}}
-    <footer class="border-t border-white/[0.07] bg-[#080a0f] px-6 sm:px-10 md:px-[60px] py-10 md:py-[60px] grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
-        <div class="col-span-2 md:col-span-1">
+    <footer style="border-top:1px solid rgba(255,255,255,0.07);padding:60px;background:#080a0f;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;" class="flex-col-on-mobile">
+        <div>
             <a href="{{ url('/') }}" style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:#fff;text-decoration:none;display:block;margin-bottom:16px;">
                 Sky<span style="color:#4f8eff;">Infers</span>
             </a>
@@ -105,7 +152,7 @@
         </div>
         @endforeach
     </footer>
-    <div class="border-t border-white/[0.07] bg-[#080a0f] px-6 sm:px-10 md:px-[60px] py-5 flex flex-col sm:flex-row justify-between items-center gap-2 text-[.82rem] text-[#6b7280]">
+    <div style="border-top:1px solid rgba(255,255,255,0.07);padding:24px 60px;display:flex;justify-content:space-between;align-items:center;font-size:.82rem;color:#6b7280;background:#080a0f;">
         <span>© {{ date('Y') }} SkyInfers. All rights reserved.</span>
         <span>Built with precision &amp; purpose ✦</span>
     </div>
@@ -154,27 +201,6 @@
             });
         }, { threshold: 0.12 });
         document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-        // Hamburger
-        const ham = document.getElementById('hamburger');
-        const mob = document.getElementById('mobileMenu');
-        const lines = ham.querySelectorAll('.ham-line');
-        let menuOpen = false;
-        ham.addEventListener('click', () => {
-            menuOpen = !menuOpen;
-            mob.style.setProperty('display', menuOpen ? 'flex' : 'none', 'important');
-            document.body.style.overflow = menuOpen ? 'hidden' : '';
-            lines[0].style.transform = menuOpen ? 'translateY(7px) rotate(45deg)' : '';
-            lines[1].style.opacity   = menuOpen ? '0' : '1';
-            lines[2].style.transform = menuOpen ? 'translateY(-7px) rotate(-45deg)' : '';
-        });
-        mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-            menuOpen = false;
-            mob.style.setProperty('display', 'none', 'important');
-            document.body.style.overflow = '';
-            lines.forEach(l => { l.style.transform=''; l.style.opacity='1'; });
-        }));
-
     </script>
 
     @stack('scripts')

@@ -1,13 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'Projects — SkyInfers')
+@section('title',       'Projects — Our Work & Portfolio | SkyInfers Digital Marketing Agency')
+@section('description',  'Explore SkyInfers\'s portfolio of web design, social media marketing and system development projects. Real work, real results for businesses across Malaysia.')
+@section('keywords',     'skyinfers portfolio, web design portfolio malaysia, digital marketing projects malaysia, laravel projects, e-commerce website portfolio, corporate website examples')
+@section('canonical',    url('/projects'))
+@section('og_title',     'Projects — Portfolio | SkyInfers')
+@section('og_description','Real work, real results. A showcase of web design, content creation and system development projects by SkyInfers.')
 
 @section('content')
 
 {{-- ══════════════════════════════════════
      PAGE HERO
 ══════════════════════════════════════ --}}
-<section class="relative flex flex-col justify-center px-5 sm:px-8 md:px-14 pt-32 md:pt-40 pb-14 md:pb-20 overflow-hidden border-b border-white/[0.07]">
+<section class="relative flex flex-col justify-center px-14 pt-40 pb-20 overflow-hidden border-b border-white/[0.07]">
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute w-[500px] h-[500px] -top-20 -right-20 rounded-full bg-accent blur-[140px] opacity-[0.12]"></div>
         <div class="absolute w-[300px] h-[300px] bottom-0 left-10 rounded-full bg-accent-2 blur-[120px] opacity-[0.10]"></div>
@@ -33,7 +38,7 @@
 {{-- ══════════════════════════════════════
      FILTER TABS
 ══════════════════════════════════════ --}}
-<div class="px-5 sm:px-8 md:px-14 py-4 md:py-6 border-b border-white/[0.07] flex items-center gap-2 md:gap-3 flex-wrap bg-bg-2">
+<div class="px-14 py-6 border-b border-white/[0.07] flex items-center gap-3 flex-wrap bg-bg-2">
     @foreach(['All', 'Content Creation', 'Web Design', 'System Development'] as $filter)
     <button
         type="button"
@@ -49,7 +54,7 @@
 {{-- ══════════════════════════════════════
      PROJECTS
 ══════════════════════════════════════ --}}
-<section class="px-5 sm:px-8 md:px-14 py-16 md:py-24 border-b border-white/[0.07]">
+<section class="px-14 py-24 border-b border-white/[0.07]">
 
     @php
     $projects = [
@@ -389,7 +394,7 @@
     ];
     @endphp
     @foreach($stats as $i => $stat)
-    <div class="reveal reveal-delay-{{ $i }} px-6 py-8 md:px-12 md:py-14 border border-white/[0.07] hover:bg-surface transition-colors duration-300 text-center">
+    <div class="reveal reveal-delay-{{ $i }} px-12 py-14 border border-white/[0.07] hover:bg-surface transition-colors duration-300 text-center">
         <div class="stat-num font-syne text-[3rem] font-extrabold leading-none tracking-tight mb-2" data-target="{{ $stat['num'] }}" data-suffix="{{ $stat['suffix'] }}">0</div>
         <div class="text-muted text-sm font-medium">{{ $stat['label'] }}</div>
     </div>
@@ -400,7 +405,7 @@
 {{-- ══════════════════════════════════════
      CTA
 ══════════════════════════════════════ --}}
-<section class="relative text-center px-5 sm:px-8 md:px-14 py-20 md:py-36 overflow-hidden">
+<section class="relative text-center px-14 py-36 overflow-hidden">
     <div class="cta-radial absolute inset-0 pointer-events-none"></div>
     <div class="relative max-w-2xl mx-auto reveal">
         <div class="inline-flex justify-center items-center gap-2.5 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-6 before:content-[''] before:w-5 before:h-px before:bg-accent after:content-[''] after:w-5 after:h-px after:bg-accent">
@@ -432,7 +437,7 @@
             @endforeach
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <div class="flex gap-3 max-w-md mx-auto">
             <input
                 type="email"
                 id="emailInput"
@@ -452,6 +457,24 @@
 </section>
 
 @endsection
+@push('jsonld')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "SkyInfers Projects & Portfolio",
+    "description": "Portfolio of web design, social media marketing and system development projects by SkyInfers.",
+    "url": "{{ config('app.url') }}/projects",
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home",     "item": "{{ config('app.url') }}" },
+            { "@type": "ListItem", "position": 2, "name": "Projects", "item": "{{ config('app.url') }}/projects" }
+        ]
+    }
+}
+</script>
+@endpush
 
 
 @push('scripts')

@@ -1,13 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'Contact — SkyInfers')
+@section('title',       'Contact SkyInfers — Get a Free Consultation | Digital Agency Johor Bahru')
+@section('description',  'Get in touch with SkyInfers for web design, social media marketing or system development. Based in Johor Bahru, Malaysia. We reply within 24 hours.')
+@section('keywords',     'contact skyinfers, digital marketing agency contact johor bahru, web design consultation malaysia, hire web designer johor bahru, digital agency malaysia contact')
+@section('canonical',    url('/contact'))
+@section('og_title',     'Contact SkyInfers — Free Consultation')
+@section('og_description','Have a project in mind? Contact SkyInfers in Johor Bahru. We reply within 24 hours.')
 
 @section('content')
 
 {{-- ══════════════════════════════════════
      PAGE HERO
 ══════════════════════════════════════ --}}
-<section class="relative flex flex-col justify-center px-5 sm:px-8 md:px-14 pt-32 md:pt-40 pb-14 md:pb-20 overflow-hidden border-b border-white/[0.07]">
+<section class="relative flex flex-col justify-center px-14 pt-40 pb-20 overflow-hidden border-b border-white/[0.07]">
 
     {{-- Background blobs --}}
     <div class="absolute inset-0 pointer-events-none">
@@ -36,8 +41,8 @@
 {{-- ══════════════════════════════════════
      CONTACT FORM + INFO
 ══════════════════════════════════════ --}}
-<section class="px-5 sm:px-8 md:px-14 py-16 md:py-24 border-b border-white/[0.07]">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
+<section class="px-14 py-24 border-b border-white/[0.07]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
 
         {{-- Left: Contact Info --}}
         <div class="reveal">
@@ -99,7 +104,7 @@
         </div>
 
         {{-- Right: Contact Form --}}
-        <div class="reveal reveal-delay-1 bg-surface border border-white/[0.07] rounded-2xl p-6 md:p-10">
+        <div class="reveal reveal-delay-1 bg-surface border border-white/[0.07] rounded-2xl p-10">
             <h3 class="font-syne font-bold text-xl tracking-tight mb-8">Send us a message</h3>
 
             <div class="flex flex-col gap-5">
@@ -176,7 +181,7 @@
 {{-- ══════════════════════════════════════
      FAQ
 ══════════════════════════════════════ --}}
-<section class="bg-bg-2 px-5 sm:px-8 md:px-14 py-16 md:py-24 border-b border-white/[0.07]">
+<section class="bg-bg-2 px-14 py-24 border-b border-white/[0.07]">
     <div class="reveal mb-16">
         <div class="flex items-center gap-2.5 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-5 before:content-[''] before:w-5 before:h-px before:bg-accent">
             &nbsp;FAQ
@@ -199,10 +204,10 @@
         @endphp
         @foreach($faqs as $i => $faq)
         <div class="reveal {{ $i % 2 !== 0 ? 'reveal-delay-1' : '' }} faq-item bg-surface border border-white/[0.07]
-            {{ $i === 0 ? 'rounded-t-2xl md:rounded-tl-2xl md:rounded-tr-none' : '' }}
-            {{ $i === 1 ? 'md:rounded-tr-2xl' : '' }}
-            {{ $i === count($faqs)-2 ? 'md:rounded-bl-2xl' : '' }}
-            {{ $i === count($faqs)-1 ? 'rounded-b-2xl md:rounded-br-2xl md:rounded-bl-none' : '' }}
+            {{ $i === 0 ? 'rounded-tl-2xl' : '' }}
+            {{ $i === 1 ? 'rounded-tr-2xl' : '' }}
+            {{ $i === count($faqs)-2 ? 'rounded-bl-2xl' : '' }}
+            {{ $i === count($faqs)-1 ? 'rounded-br-2xl' : '' }}
             p-8 cursor-pointer hover:border-accent/25 transition-all duration-300"
             onclick="toggleFaq(this)">
             <div class="flex items-start justify-between gap-4">
@@ -216,6 +221,52 @@
 </section>
 
 @endsection
+@push('jsonld')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact SkyInfers",
+    "description": "Get in touch with SkyInfers for digital marketing, web design or system development services.",
+    "url": "{{ config('app.url') }}/contact",
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home",    "item": "{{ config('app.url') }}" },
+            { "@type": "ListItem", "position": 2, "name": "Contact", "item": "{{ config('app.url') }}/contact" }
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How long does a project take?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A landing page takes 3–5 days, a corporate website 7–14 days, and a custom system can range from 2–8 weeks." }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you work with small businesses?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We work with businesses of all sizes, from solo founders to established companies. Our packages are flexible to fit different budgets." }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you offer ongoing support after launch?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer post-launch support for all our web and system projects." }
+        },
+        {
+            "@type": "Question",
+            "name": "How does payment work?",
+            "acceptedAnswer": { "@type": "Answer", "text": "We typically work with a 50% deposit upfront and 50% upon delivery. For larger projects, we can arrange milestone-based payments." }
+        }
+    ]
+}
+</script>
+@endpush
 
 
 @push('scripts')

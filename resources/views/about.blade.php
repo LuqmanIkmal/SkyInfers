@@ -1,13 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'About — SkyInfers')
+@section('title',       'About SkyInfers — Creative & Tech Agency in Johor Bahru, Malaysia')
+@section('description',  'Meet the team behind SkyInfers — Luqman Ikmal (Technical Director) and Firas Jazmi (Creative Director). A creative and tech agency built to grow businesses in Malaysia.')
+@section('keywords',     'about skyinfers, digital agency johor bahru, luqman ikmal, firas jazmi, creative tech agency malaysia, web design team johor bahru')
+@section('canonical',    url('/about'))
+@section('og_title',     'About SkyInfers — The Team Behind Every Project')
+@section('og_description','SkyInfers is led by a technical director and creative director working together to deliver results. Based in Johor Bahru, Malaysia.')
 
 @section('content')
 
 {{-- ══════════════════════════════════════
      PAGE HERO
 ══════════════════════════════════════ --}}
-<section class="relative flex flex-col justify-center px-5 sm:px-8 md:px-14 pt-32 md:pt-40 pb-14 md:pb-20 overflow-hidden border-b border-white/[0.07]">
+<section class="relative flex flex-col justify-center px-14 pt-40 pb-20 overflow-hidden border-b border-white/[0.07]">
 
     {{-- Background blobs --}}
     <div class="absolute inset-0 pointer-events-none">
@@ -36,7 +41,7 @@
 {{-- ══════════════════════════════════════
      MEET THE TEAM
 ══════════════════════════════════════ --}}
-<section class="px-5 sm:px-8 md:px-14 py-16 md:py-24 border-b border-white/[0.07]">
+<section class="px-14 py-24 border-b border-white/[0.07]">
 
     {{-- Header --}}
     <div class="reveal text-center max-w-xl mx-auto mb-16">
@@ -52,7 +57,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-0.5">
 
         {{-- ── TECHNICAL DIRECTOR ── --}}
-        <div class="reveal group relative bg-surface border border-white/[0.07] rounded-t-2xl md:rounded-tl-2xl md:rounded-tr-none overflow-hidden hover:border-accent/30 transition-all duration-500">
+        <div class="reveal group relative bg-surface border border-white/[0.07] rounded-l-2xl overflow-hidden hover:border-accent/30 transition-all duration-500">
 
             {{-- Glow on hover --}}
             <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -62,7 +67,7 @@
             <div class="absolute left-0 top-0 w-[3px] h-0 group-hover:h-full transition-all duration-500 ease-out rounded-r-full"
                  style="background: linear-gradient(to bottom, #4f8eff, rgba(79,142,255,0.1));"></div>
 
-            <div class="relative p-6 md:p-10">
+            <div class="relative p-10">
 
                 {{-- Photo --}}
                 <div class="relative mb-8 overflow-hidden rounded-2xl"
@@ -125,7 +130,7 @@
         </div>
 
         {{-- ── CREATIVE DIRECTOR ── --}}
-        <div class="reveal reveal-delay-1 group relative bg-surface border border-white/[0.07] rounded-b-2xl md:rounded-br-2xl md:rounded-bl-none overflow-hidden hover:border-accent-2/30 transition-all duration-500">
+        <div class="reveal reveal-delay-1 group relative bg-surface border border-white/[0.07] rounded-r-2xl overflow-hidden hover:border-accent-2/30 transition-all duration-500">
 
             {{-- Glow on hover --}}
             <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -135,7 +140,7 @@
             <div class="absolute right-0 top-0 w-[3px] h-0 group-hover:h-full transition-all duration-500 ease-out rounded-l-full"
                  style="background: linear-gradient(to bottom, #00d4aa, rgba(0,212,170,0.1));"></div>
 
-            <div class="relative p-6 md:p-10">
+            <div class="relative p-10">
 
                 {{-- Photo --}}
                 <div class="relative mb-8 overflow-hidden rounded-2xl"
@@ -198,7 +203,7 @@
     </div>
 
     {{-- Bottom quote --}}
-    <div class="reveal mt-0.5 bg-surface border border-white/[0.07] rounded-b-2xl px-5 sm:px-8 md:px-12 py-8 md:py-10 text-center">
+    <div class="reveal mt-0.5 bg-surface border border-white/[0.07] rounded-b-2xl px-12 py-10 text-center">
         <p class="font-syne font-extrabold text-xl tracking-tight text-white/60 max-w-2xl mx-auto" style="font-size:clamp(1rem,2vw,1.4rem);">
             "Together we cover both sides of the equation, <span class="text-accent">the technical</span> and <span class="text-accent-2">the creative, </span>so nothing falls through the cracks."
         </p>
@@ -209,8 +214,8 @@
 {{-- ══════════════════════════════════════
      OUR STORY
 ══════════════════════════════════════ --}}
-<section class="px-5 sm:px-8 md:px-14 py-16 md:py-24 border-b border-white/[0.07]">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+<section class="px-14 py-24 border-b border-white/[0.07]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
         {{-- Left --}}
         <div class="reveal">
@@ -258,7 +263,7 @@
 {{-- ══════════════════════════════════════
      MISSION & VISION
 ══════════════════════════════════════ --}}
-<section class="bg-bg-2 px-5 sm:px-8 md:px-14 py-16 md:py-24 border-b border-white/[0.07]">
+<section class="bg-bg-2 px-14 py-24 border-b border-white/[0.07]">
     <div class="reveal text-center max-w-2xl mx-auto mb-16">
         <div class="inline-flex items-center gap-2.5 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-5 before:content-[''] before:w-5 before:h-px before:bg-accent after:content-[''] after:w-5 after:h-px after:bg-accent">
             &nbsp;What Drives Us&nbsp;
@@ -270,7 +275,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-0.5">
         {{-- Mission --}}
-        <div class="reveal bg-surface border border-white/[0.07] rounded-t-2xl md:rounded-tl-2xl md:rounded-tr-none p-8 md:p-12 hover:border-accent/25 transition-all duration-300">
+        <div class="reveal bg-surface border border-white/[0.07] rounded-l-2xl p-12 hover:border-accent/25 transition-all duration-300">
             <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-3xl mb-8">🎯</div>
             <div class="text-accent text-xs font-bold tracking-widest uppercase mb-4">Our Mission</div>
             <h3 class="font-syne font-extrabold text-2xl tracking-tight mb-5">To make exceptional digital work accessible</h3>
@@ -280,7 +285,7 @@
         </div>
 
         {{-- Vision --}}
-        <div class="reveal reveal-delay-1 bg-surface border border-white/[0.07] rounded-b-2xl md:rounded-br-2xl md:rounded-bl-none p-8 md:p-12 hover:border-accent/25 transition-all duration-300">
+        <div class="reveal reveal-delay-1 bg-surface border border-white/[0.07] rounded-r-2xl p-12 hover:border-accent/25 transition-all duration-300">
             <div class="w-14 h-14 bg-accent-2/10 rounded-2xl flex items-center justify-center text-3xl mb-8">🚀</div>
             <div class="text-accent-2 text-xs font-bold tracking-widest uppercase mb-4">Our Vision</div>
             <h3 class="font-syne font-extrabold text-2xl tracking-tight mb-5">To be the go-to digital partner in Southeast Asia</h3>
@@ -295,7 +300,7 @@
 {{-- ══════════════════════════════════════
      OUR VALUES
 ══════════════════════════════════════ --}}
-<section class="px-5 sm:px-8 md:px-14 py-16 md:py-24 border-b border-white/[0.07]">
+<section class="px-14 py-24 border-b border-white/[0.07]">
     <div class="reveal mb-16">
         <div class="flex items-center gap-2.5 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-5 before:content-[''] before:w-5 before:h-px before:bg-accent">
             &nbsp;Our Values
@@ -352,7 +357,7 @@
             {{ $i === 2 ? 'rounded-tr-2xl' : '' }}
             {{ $i === 3 ? 'rounded-bl-2xl' : '' }}
             {{ $i === 5 ? 'rounded-br-2xl' : '' }}
-            p-7 md:p-10 hover:border-accent/25 hover:-translate-y-0.5 transition-all duration-300">
+            p-10 hover:border-accent/25 hover:-translate-y-0.5 transition-all duration-300">
             <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-2xl mb-6">{{ $v['icon'] }}</div>
             <h3 class="font-syne font-bold text-lg tracking-tight mb-3">{{ $v['title'] }}</h3>
             <p class="text-muted text-sm leading-relaxed">{{ $v['desc'] }}</p>
@@ -365,8 +370,8 @@
 {{-- ══════════════════════════════════════
      WHY WORK WITH US
 ══════════════════════════════════════ --}}
-<section class="bg-bg-2 px-5 sm:px-8 md:px-14 py-16 md:py-24 border-b border-white/[0.07]">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+<section class="bg-bg-2 px-14 py-24 border-b border-white/[0.07]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
         {{-- Left --}}
         <div class="reveal">
@@ -420,7 +425,7 @@
 {{-- ══════════════════════════════════════
      CTA
 ══════════════════════════════════════ --}}
-<section class="relative text-center px-5 sm:px-8 md:px-14 py-20 md:py-36 overflow-hidden">
+<section class="relative text-center px-14 py-36 overflow-hidden">
     <div class="cta-radial absolute inset-0 pointer-events-none"></div>
     <div class="relative max-w-2xl mx-auto reveal">
         <div class="inline-flex justify-center items-center gap-2.5 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-6 before:content-[''] before:w-5 before:h-px before:bg-accent after:content-[''] after:w-5 after:h-px after:bg-accent">
@@ -454,7 +459,7 @@
         </div>
 
         {{-- Email + Submit --}}
-        <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <div class="flex gap-3 max-w-md mx-auto">
             <input
                 type="email"
                 id="emailInput"
@@ -474,6 +479,55 @@
 </section>
 
 @endsection
+@push('jsonld')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About SkyInfers",
+    "description": "Meet the team behind SkyInfers — a creative and tech agency in Johor Bahru, Malaysia.",
+    "url": "{{ config('app.url') }}/about",
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home",  "item": "{{ config('app.url') }}" },
+            { "@type": "ListItem", "position": 2, "name": "About", "item": "{{ config('app.url') }}/about" }
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "SkyInfers Team",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@type": "Person",
+                "name": "Luqman Ikmal",
+                "jobTitle": "Technical Director",
+                "worksFor": { "@type": "Organization", "name": "SkyInfers" },
+                "knowsAbout": ["Laravel", "System Architecture", "API Development", "Web Performance"]
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@type": "Person",
+                "name": "Firas Jazmi",
+                "jobTitle": "Creative Director",
+                "worksFor": { "@type": "Organization", "name": "SkyInfers" },
+                "knowsAbout": ["Brand Identity", "Poster Design", "Video Production", "UI/UX Design"]
+            }
+        }
+    ]
+}
+</script>
+@endpush
 
 
 @push('scripts')

@@ -1,13 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'SkyInfers Digital Marketing Agency')
+@section('title',       'SkyInfers — Digital Marketing Agency in Johor Bahru, Malaysia')
+@section('description',  'SkyInfers is a digital marketing agency in Johor Bahru. We offer social media marketing, professional web design and custom system development to grow your business.')
+@section('keywords',     'digital marketing agency johor bahru, web design johor bahru, social media marketing malaysia, content creation agency, system development malaysia, skyinfers')
+@section('canonical',    url('/'))
+@section('og_title',     'SkyInfers — Digital Marketing Agency in Johor Bahru')
+@section('og_description','We help businesses turn clicks into revenue. Content creation, web design and system development — all under one roof in Johor Bahru.')
 
 @section('content')
 
 {{-- ══════════════════════════════════════
      HERO
 ══════════════════════════════════════ --}}
-<section id="hero" class="relative min-h-screen flex flex-col justify-between px-5 sm:px-8 md:px-14 pt-24 pb-10 overflow-hidden">
+<section id="hero" class="relative h-screen flex flex-col justify-between px-14 pt-24 pb-10 overflow-hidden">
 
     {{-- Blobs --}}
     <div class="absolute inset-0 pointer-events-none">
@@ -88,7 +93,7 @@
 {{-- ══════════════════════════════════════
      SERVICES
 ══════════════════════════════════════ --}}
-<section id="services" class="bg-bg-2 px-5 sm:px-8 md:px-14 py-16 md:py-28">
+<section id="services" class="bg-bg-2 px-14 py-28">
 
     {{-- Header --}}
     <div class="reveal flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6">
@@ -160,14 +165,14 @@
             <div class="relative grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-0 items-stretch">
 
                 {{-- Left: Number + Icon --}}
-                <div class="flex flex-row md:flex-col items-center justify-start md:justify-center gap-4 px-5 py-6 md:px-10 md:py-10 border-b md:border-b-0 md:border-r border-white/[0.07] md:min-w-[120px]">
+                <div class="flex flex-col items-center justify-center gap-4 px-10 py-10 border-r border-white/[0.07] min-w-[120px]">
                     <div class="font-syne text-[2.5rem] font-extrabold leading-none tracking-tight text-white/[0.05] group-hover:text-white/[0.12] transition-all duration-500">{{ $s['num'] }}</div>
                     <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1"
                          style="background: rgba({{ $s['color'] }}, 0.1);">{{ $s['icon'] }}</div>
                 </div>
 
                 {{-- Middle: Content --}}
-                <div class="flex flex-col justify-center px-5 py-6 md:px-10 md:py-10 border-b md:border-b-0 md:border-r border-white/[0.07]">
+                <div class="flex flex-col justify-center px-10 py-10 border-r border-white/[0.07]">
                     <div class="flex flex-wrap gap-2 mb-4">
                         @foreach($s['tags'] as $tag)
                         <span class="text-xs px-3 py-1 rounded-full border border-white/[0.07] group-hover:border-accent/20 text-muted font-medium transition-all duration-300">{{ $tag }}</span>
@@ -178,7 +183,7 @@
                 </div>
 
                 {{-- Right: Features + CTA --}}
-                <div class="flex flex-col justify-between px-5 py-6 md:px-10 md:py-10 md:min-w-[220px]">
+                <div class="flex flex-col justify-between px-10 py-10 min-w-[220px]">
                     <ul class="flex flex-col gap-2.5 mb-8">
                         @foreach($s['items'] as $item)
                         <li class="flex items-center gap-3 text-sm text-muted">
@@ -207,7 +212,7 @@
 ══════════════════════════════════════ --}}
 <div id="stats" class="grid grid-cols-1 md:grid-cols-2">
     {{-- Left --}}
-    <div class="stats-left reveal px-5 sm:px-8 md:px-14 py-16 md:py-24 border-b md:border-b-0 md:border-r border-white/[0.07] flex flex-col justify-center">
+    <div class="stats-left reveal px-14 py-24 border-b md:border-b-0 md:border-r border-white/[0.07] flex flex-col justify-center">
         <div class="flex items-center gap-2.5 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-5 before:content-[''] before:w-5 before:h-px before:bg-accent">
             &nbsp;By the Numbers
         </div>
@@ -233,7 +238,7 @@
         ];
         @endphp
         @foreach($stats as $i => $stat)
-        <div class="reveal reveal-delay-{{ $i }} stat-box px-6 py-8 md:px-12 md:py-14 border border-white/[0.07] hover:bg-surface transition-colors duration-300 {{ $i >= 2 ? 'border-b-0' : '' }} {{ $i % 2 !== 0 ? 'border-r-0' : '' }}">
+        <div class="reveal reveal-delay-{{ $i }} stat-box px-12 py-14 border border-white/[0.07] hover:bg-surface transition-colors duration-300 {{ $i >= 2 ? 'border-b-0' : '' }} {{ $i % 2 !== 0 ? 'border-r-0' : '' }}">
             <div class="stat-num font-syne text-[3.5rem] font-extrabold leading-none tracking-tight mb-2" data-target="{{ $stat['num'] }}">0</div>
             <div class="text-muted text-sm font-medium">{{ $stat['suffix'] }} {{ $stat['label'] }}</div>
         </div>
@@ -245,7 +250,7 @@
 {{-- ══════════════════════════════════════
      PROCESS
 ══════════════════════════════════════ --}}
-<section id="process" class="bg-bg-2 px-5 sm:px-8 md:px-14 py-16 md:py-28">
+<section id="process" class="bg-bg-2 px-14 py-28">
     <div class="reveal mb-16">
         <div class="flex items-center gap-2.5 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-5 before:content-[''] before:w-5 before:h-px before:bg-accent">
             &nbsp;How We Work
@@ -265,7 +270,7 @@
         ];
         @endphp
         @foreach($steps as $i => $step)
-        <div class="process-step reveal reveal-delay-{{ $i }} group p-6 md:p-10 hover:bg-surface transition-all duration-300 relative overflow-hidden flex flex-col">
+        <div class="process-step reveal reveal-delay-{{ $i }} group p-10 hover:bg-surface transition-all duration-300 relative overflow-hidden flex flex-col">
             {{-- Animated left border on hover --}}
             <div class="absolute left-0 top-0 w-[2px] h-0 bg-gradient-to-b from-accent to-accent-2 group-hover:h-full transition-all duration-500"></div>
 
@@ -290,7 +295,7 @@
 {{-- ══════════════════════════════════════
      TESTIMONIALS
 ══════════════════════════════════════ --}}
-<section id="testimonials" class="bg-bg px-5 sm:px-8 md:px-14 py-16 md:py-28">
+<section id="testimonials" class="bg-bg px-14 py-28">
     <div class="reveal flex flex-col md:flex-row justify-between items-start md:items-end mb-14 gap-6">
         <div>
             <div class="flex items-center gap-2.5 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-5 before:content-[''] before:w-5 before:h-px before:bg-accent">
@@ -315,7 +320,7 @@
         @endphp
 
         @foreach($testimonials as $i => $t)
-        <div class="reveal {{ $i % 3 > 0 ? 'reveal-delay-'.($i % 3) : '' }} bg-surface border border-white/[0.07] rounded-2xl p-6 md:p-9 hover:border-accent/20 hover:-translate-y-0.5 transition-all duration-300">
+        <div class="reveal {{ $i % 3 > 0 ? 'reveal-delay-'.($i % 3) : '' }} bg-surface border border-white/[0.07] rounded-2xl p-9 hover:border-accent/20 hover:-translate-y-0.5 transition-all duration-300">
             <div class="text-accent text-sm mb-4">★★★★★</div>
             <p class="text-muted text-sm leading-[1.75] italic mb-7">{{ $t['quote'] }}</p>
             <div class="flex items-center gap-3.5">
@@ -336,7 +341,7 @@
 {{-- ══════════════════════════════════════
      CTA
 ══════════════════════════════════════ --}}
-<section id="cta" class="relative bg-bg-2 text-center px-5 sm:px-8 md:px-14 py-20 md:py-36 overflow-hidden">
+<section id="cta" class="relative bg-bg-2 text-center px-14 py-36 overflow-hidden">
     <div class="cta-radial absolute inset-0 pointer-events-none"></div>
     <div class="relative max-w-2xl mx-auto reveal">
         <div class="inline-flex justify-center items-center gap-2.5 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-6 before:content-[''] before:w-5 before:h-px before:bg-accent after:content-[''] after:w-5 after:h-px after:bg-accent">
@@ -370,7 +375,7 @@
         </div>
 
         {{-- Email + Submit --}}
-        <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <div class="flex gap-3 max-w-md mx-auto">
             <input
                 type="email"
                 id="emailInput"
@@ -391,6 +396,35 @@
 
 @endsection
 
+@push('jsonld')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SkyInfers",
+    "url": "{{ config('app.url') }}",
+    "description": "Digital marketing agency in Johor Bahru offering social media marketing, web design and system development.",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ config('app.url') }}/projects?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SkyInfers — Digital Marketing Agency in Johor Bahru",
+    "description": "SkyInfers helps businesses grow through content creation, web design and system development.",
+    "url": "{{ config('app.url') }}",
+    "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ config('app.url') }}" }]
+    }
+}
+</script>
+@endpush
 
 @push('scripts')
 <style>

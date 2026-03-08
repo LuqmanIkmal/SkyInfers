@@ -1,13 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'Services — SkyInfers')
+@section('title',       'Services — Social Media Marketing, Web Design & System Development | SkyInfers')
+@section('description',  'SkyInfers offers social media marketing, professional web design and custom system development for businesses in Malaysia. One team for all your digital needs.')
+@section('keywords',     'social media marketing malaysia, web design services malaysia, system development johor bahru, landing page design, e-commerce website malaysia, corporate website design, laravel development malaysia')
+@section('canonical',    url('/services'))
+@section('og_title',     'Services — SkyInfers Digital Marketing Agency')
+@section('og_description','Social media marketing, web design and system development — all under one roof. Based in Johor Bahru, Malaysia.')
 
 @section('content')
 
 {{-- ══════════════════════════════════════
      PAGE HERO
 ══════════════════════════════════════ --}}
-<section class="relative flex flex-col justify-center px-5 sm:px-8 md:px-14 pt-32 md:pt-40 pb-14 md:pb-20 overflow-hidden border-b border-white/[0.07]">
+<section class="relative flex flex-col justify-center px-14 pt-40 pb-20 overflow-hidden border-b border-white/[0.07]">
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute w-[500px] h-[500px] -top-20 -right-20 rounded-full bg-accent blur-[140px] opacity-[0.12]"></div>
         <div class="absolute w-[300px] h-[300px] bottom-0 left-10 rounded-full bg-accent-2 blur-[120px] opacity-[0.10]"></div>
@@ -33,7 +38,7 @@
 {{-- ══════════════════════════════════════
      INTERACTIVE SERVICES
 ══════════════════════════════════════ --}}
-<section class="px-5 sm:px-8 md:px-14 py-16 md:py-24 border-b border-white/[0.07]">
+<section class="px-14 py-24 border-b border-white/[0.07]">
     @php
     $services = [
         [
@@ -125,12 +130,12 @@
     @endphp
 
     {{-- ── Tab Navigation ── --}}
-    <div class="reveal flex gap-0.5 mb-0.5 overflow-x-auto">
+    <div class="reveal flex gap-0.5 mb-0.5">
         @foreach($services as $i => $s)
         <button
             type="button"
             onclick="switchTab({{ $i }})"
-            class="svc-nav flex-none min-w-[140px] md:flex-1 relative flex items-center gap-3 md:gap-4 px-4 md:px-8 py-4 md:py-6 border border-white/[0.07] overflow-hidden transition-all duration-300 cursor-pointer text-left
+            class="svc-nav flex-1 relative flex items-center gap-4 px-8 py-6 border border-white/[0.07] overflow-hidden transition-all duration-300 cursor-pointer text-left
                 {{ $i === 0 ? 'rounded-tl-2xl' : '' }}
                 {{ $i === count($services)-1 ? 'rounded-tr-2xl' : '' }}"
             style="background:#1a2030;"
@@ -161,7 +166,7 @@
             <div class="grid grid-cols-1 md:grid-cols-[1fr_320px] gap-0.5">
 
                 {{-- Main content --}}
-                <div class="bg-surface border border-white/[0.07] rounded-bl-2xl p-6 md:p-12 relative overflow-hidden">
+                <div class="bg-surface border border-white/[0.07] rounded-bl-2xl p-12 relative overflow-hidden">
 
                     {{-- Radial glow --}}
                     <div class="absolute top-0 right-0 w-[400px] h-[400px] pointer-events-none"
@@ -169,7 +174,7 @@
 
                     <div class="relative">
                         {{-- Header --}}
-                        <div class="flex flex-wrap items-start gap-4 md:gap-6 mb-6 md:mb-10">
+                        <div class="flex items-start gap-6 mb-10">
                             <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0"
                                  style="background: {{ $s['color'] }}1a;">{{ $s['icon'] }}</div>
                             <div>
@@ -248,7 +253,7 @@
 {{-- ══════════════════════════════════════
      WHY CHOOSE US
 ══════════════════════════════════════ --}}
-<section class="bg-bg-2 px-5 sm:px-8 md:px-14 py-16 md:py-24 border-b border-white/[0.07]">
+<section class="bg-bg-2 px-14 py-24 border-b border-white/[0.07]">
     <div class="reveal text-center max-w-2xl mx-auto mb-16">
         <div class="inline-flex items-center gap-2.5 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-5 before:content-[''] before:w-5 before:h-px before:bg-accent after:content-[''] after:w-5 after:h-px after:bg-accent">
             &nbsp;Why SkyInfers&nbsp;
@@ -268,7 +273,7 @@
         ];
         @endphp
         @foreach($reasons as $i => $r)
-        <div class="reveal reveal-delay-{{ $i }} bg-surface border border-white/[0.07] {{ $i === 0 ? 'rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none' : ($i === 3 ? 'rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none' : '') }} p-7 md:p-10 hover:border-accent/25 hover:-translate-y-0.5 transition-all duration-300">
+        <div class="reveal reveal-delay-{{ $i }} bg-surface border border-white/[0.07] {{ $i === 0 ? 'rounded-l-2xl' : ($i === 3 ? 'rounded-r-2xl' : '') }} p-10 hover:border-accent/25 hover:-translate-y-0.5 transition-all duration-300">
             <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-2xl mb-6">{{ $r['icon'] }}</div>
             <h3 class="font-syne font-bold text-lg tracking-tight mb-3">{{ $r['title'] }}</h3>
             <p class="text-muted text-sm leading-relaxed">{{ $r['desc'] }}</p>
@@ -281,7 +286,7 @@
 {{-- ══════════════════════════════════════
      CTA
 ══════════════════════════════════════ --}}
-<section id="cta-section" class="relative text-center px-5 sm:px-8 md:px-14 py-20 md:py-36 overflow-hidden">
+<section id="cta-section" class="relative text-center px-14 py-36 overflow-hidden">
     <div class="cta-radial absolute inset-0 pointer-events-none"></div>
     <div class="relative max-w-2xl mx-auto reveal">
         <div class="inline-flex justify-center items-center gap-2.5 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-6 before:content-[''] before:w-5 before:h-px before:bg-accent after:content-[''] after:w-5 after:h-px after:bg-accent">
@@ -313,7 +318,7 @@
             @endforeach
         </div>
 
-        <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <div class="flex gap-3 max-w-md mx-auto">
             <input
                 type="email"
                 id="emailInput"
@@ -333,6 +338,65 @@
 </section>
 
 @endsection
+@push('jsonld')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "SkyInfers Services",
+    "url": "{{ config('app.url') }}/services",
+    "description": "Digital marketing services offered by SkyInfers in Malaysia.",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@type": "Service",
+                "name": "Social Media Marketing",
+                "description": "We create visual content that captures attention, communicates your value, and builds a brand people remember.",
+                "provider": { "@type": "Organization", "name": "SkyInfers" },
+                "areaServed": "Malaysia",
+                "serviceType": "Social Media Marketing"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@type": "Service",
+                "name": "Web Design",
+                "description": "Beautiful, conversion-focused websites including landing pages, corporate websites and e-commerce stores.",
+                "provider": { "@type": "Organization", "name": "SkyInfers" },
+                "areaServed": "Malaysia",
+                "serviceType": "Web Design & Development"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@type": "Service",
+                "name": "System Development",
+                "description": "Custom-built systems including CRM, business management systems, REST APIs and web applications.",
+                "provider": { "@type": "Organization", "name": "SkyInfers" },
+                "areaServed": "Malaysia",
+                "serviceType": "Software Development"
+            }
+        }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",     "item": "{{ config('app.url') }}" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "{{ config('app.url') }}/services" }
+    ]
+}
+</script>
+@endpush
 
 
 @push('scripts')
