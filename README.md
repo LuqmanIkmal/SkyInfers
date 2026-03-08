@@ -1,2 +1,0 @@
-# SkyInfers
-SkyInfers Company Website
