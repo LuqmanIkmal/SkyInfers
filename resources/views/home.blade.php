@@ -28,7 +28,7 @@
         <h1 class="hero-init opacity-0 animate-fade-up-2 font-syne font-extrabold leading-[1.05] tracking-tight"
             style="font-size: clamp(2rem, 5vw, 4.2rem);">
             <span class="block">We help businesses</span>
-            <span class="flex flex-wrap justify-center items-center gap-2 md:gap-4 ml-10 md:ml-[50px]">
+            <span class="flex flex-wrap justify-center items-center gap-2 md:gap-4 ml-0 md:ml-[80px]">
                 <span>turn clicks into</span>
                 <span class="relative overflow-hidden inline-block" style="height:1.10em; text-align:left;" id="cycleWrap">
                     @foreach(['revenue','profits','clients','scaling','success'] as $word)
