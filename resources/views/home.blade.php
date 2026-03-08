@@ -399,34 +399,29 @@
 @push('jsonld')
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@@context": "https://schema.org",
+    "@@type": "WebSite",
     "name": "SkyInfers",
     "url": "{{ config('app.url') }}",
-    "description": "Digital marketing agency in Johor Bahru offering social media marketing, web design and system development.",
-    "potentialAction": {
-        "@type": "SearchAction",
-        "target": "{{ config('app.url') }}/projects?search={search_term_string}",
-        "query-input": "required name=search_term_string"
-    }
+    "description": "Digital marketing agency in Johor Bahru."
 }
 </script>
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@@context": "https://schema.org",
+    "@@type": "WebPage",
     "name": "SkyInfers — Digital Marketing Agency in Johor Bahru",
-    "description": "SkyInfers helps businesses grow through content creation, web design and system development.",
     "url": "{{ config('app.url') }}",
     "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ config('app.url') }}" }]
+        "@@type": "BreadcrumbList",
+        "itemListElement": [{ "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ config('app.url') }}" }]
     }
 }
 </script>
 @endpush
 
 @push('scripts')
+@verbatim
 <style>
     /* Reveal slide up */
     .reveal {
@@ -601,7 +596,8 @@
         input.style.borderColor = '#00d4aa';
         msg.style.display = 'block';
         msg.style.color   = '#00d4aa';
-        msg.textContent   = `✓ Got it! We'll reach out about: ${[...homeSelected].join(', ')}`;
+        msg.textContent = '✓ Got it! We\'ll reach out about: ' + [...homeSelected].join(', ');
     }
 </script>
+@endverbatim
 @endpush

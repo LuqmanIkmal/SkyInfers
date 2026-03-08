@@ -5,79 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    {{-- ── Primary SEO ── --}}
     <title>@yield('title', 'SkyInfers — Digital Marketing Agency in Johor Bahru, Malaysia')</title>
-    <meta name="description" content="@yield('description', 'SkyInfers is a digital marketing agency in Johor Bahru offering content creation, web design and custom system development to grow your business online.')">
-    <meta name="keywords"    content="@yield('keywords', 'digital marketing agency johor bahru, web design malaysia, content creation malaysia, system development, social media marketing johor bahru, skyinfers')">
+    <meta name="description" content="@yield('description', 'SkyInfers is a digital marketing agency in Johor Bahru offering content creation, web design and custom system development.')">
+    <meta name="keywords"    content="@yield('keywords', 'digital marketing agency johor bahru, web design malaysia, skyinfers')">
     <meta name="author"      content="SkyInfers">
     <meta name="robots"      content="index, follow">
     <link rel="canonical"    href="@yield('canonical', url()->current())">
 
-    {{-- ── Open Graph (Facebook / WhatsApp / LinkedIn) ── --}}
     <meta property="og:type"        content="website">
     <meta property="og:site_name"   content="SkyInfers">
     <meta property="og:title"       content="@yield('og_title', 'SkyInfers — Digital Marketing Agency in Johor Bahru')">
-    <meta property="og:description" content="@yield('og_description', 'Content creation, web design and system development — all under one roof. Based in Johor Bahru, Malaysia.')">
+    <meta property="og:description" content="@yield('og_description', 'Content creation, web design and system development — all under one roof.')">
     <meta property="og:url"         content="@yield('canonical', url()->current())">
     <meta property="og:image"       content="@yield('og_image', asset('images/og-image.jpg'))">
-    <meta property="og:image:width"  content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:locale"      content="en_MY">
 
-    {{-- ── Twitter Card ── --}}
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:title"       content="@yield('og_title', 'SkyInfers — Digital Marketing Agency in Johor Bahru')">
     <meta name="twitter:description" content="@yield('og_description', 'Content creation, web design and system development — all under one roof.')">
     <meta name="twitter:image"       content="@yield('og_image', asset('images/og-image.jpg'))">
 
-    {{-- ── JSON-LD: LocalBusiness (sitewide) ── --}}
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "SkyInfers",
-        "description": "Digital marketing agency in Johor Bahru offering content creation, web design and custom system development.",
-        "url": "{{ config('app.url') }}",
-        "logo": "{{ asset('images/favicon.png') }}",
-        "image": "{{ asset('images/og-image.jpg') }}",
-        "telephone": "+60117-023-7694",
-        "email": "info@skyinfers.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Johor Bahru",
-            "addressRegion": "Johor",
-            "addressCountry": "MY"
-        },
-        "areaServed": {
-            "@type": "Country",
-            "name": "Malaysia"
-        },
-        "priceRange": "$$",
-        "openingHours": "Mo-Fr 09:00-18:00",
-        "sameAs": [
-            "https://www.instagram.com/skyinfers",
-            "https://www.facebook.com/skyinfers",
-            "https://www.linkedin.com/company/skyinfers"
-        ],
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Digital Marketing Services",
-            "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Marketing" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "System Development" } }
-            ]
-        }
-    }
-    </script>
-
-    {{-- ── Page-specific JSON-LD ── --}}
     @stack('jsonld')
 
-    {{-- ── Favicon ── --}}
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
-
-    {{-- ── Fonts ── --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
