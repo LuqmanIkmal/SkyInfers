@@ -118,7 +118,7 @@
         [
             'num'     => '01',
             'icon'    => '🎬',
-            'title'   => 'Content Creation',
+            'title'   => 'Social Media Marketing',
             'desc'    => 'We craft compelling visual content that stops the scroll and tells your brand story. From eye-catching posters to high-quality videos, we make your brand impossible to ignore.',
             'tags'    => ['Poster Design', 'Video Production', 'Brand Visuals'],
             'items'   => ['Social Media Graphics', 'Event Posters', 'Brand Videos', 'Motion Graphics'],
@@ -220,7 +220,7 @@
             Metrics that prove<br>our impact
         </h2>
         <p class="text-muted text-base leading-relaxed max-w-md mb-10">
-            We don't just deliver projects — we deliver results. Every campaign, website, and system we build is measured against real business outcomes.
+            We don't just deliver projects, we deliver results. Every campaign, website, and system we build is measured against real business outcomes.
         </p>
         <a href="#cta" class="bg-accent hover:bg-[#3a7bef] text-white px-8 py-3.5 rounded-xl font-semibold text-base transition-all duration-200 hover:-translate-y-0.5 w-fit no-underline">
             Start your project →

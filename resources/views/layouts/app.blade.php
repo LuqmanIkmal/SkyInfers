@@ -29,8 +29,9 @@
 
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -44,8 +45,8 @@
 
     {{-- Navigation --}}
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-14 py-5 transition-all duration-300 backdrop-blur-lg">
-        <a href="{{ url('/') }}" style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;letter-spacing:-0.03em;color:#fff;text-decoration:none;">
-            Sky<span style="color:#4f8eff;">Infers</span>
+        <a href="{{ url('/') }}">
+            <img src="{{ asset('images/logoWhite.png') }}" alt="SkyInfers" style="height:27px; width:auto;">
         </a>
         <ul class="hidden md:flex gap-9 list-none m-0 p-0">
         @foreach([
@@ -80,9 +81,9 @@
     {{-- Footer --}}
     <footer style="border-top:1px solid rgba(255,255,255,0.07);padding:60px;background:#080a0f;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;" class="flex-col-on-mobile">
         <div>
-            <a href="{{ url('/') }}" style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:#fff;text-decoration:none;display:block;margin-bottom:16px;">
-                Sky<span style="color:#4f8eff;">Infers</span>
-            </a>
+        <a href="{{ url('/') }}" style="display:block;margin-bottom:16px;">
+            <img src="{{ asset('images/logoWhite.png') }}" alt="SkyInfers" style="height:27px; width:auto;">
+        </a>
             <p style="color:#6b7280;font-size:.88rem;line-height:1.7;max-width:260px;">
                 Building the web's most impactful digital experiences, one pixel at a time.
             </p>
