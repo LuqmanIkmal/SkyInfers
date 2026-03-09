@@ -224,44 +224,44 @@
 @push('jsonld')
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
+    "@@context": "https://schema.org",
+    "@@type": "ContactPage",
     "name": "Contact SkyInfers",
     "description": "Get in touch with SkyInfers for digital marketing, web design or system development services.",
     "url": "{{ config('app.url') }}/contact",
     "breadcrumb": {
-        "@type": "BreadcrumbList",
+        "@@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home",    "item": "{{ config('app.url') }}" },
-            { "@type": "ListItem", "position": 2, "name": "Contact", "item": "{{ config('app.url') }}/contact" }
+            { "@@type": "ListItem", "position": 1, "name": "Home",    "item": "{{ config('app.url') }}" },
+            { "@@type": "ListItem", "position": 2, "name": "Contact", "item": "{{ config('app.url') }}/contact" }
         ]
     }
 }
 </script>
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+    "@@context": "https://schema.org",
+    "@@type": "FAQPage",
     "mainEntity": [
         {
-            "@type": "Question",
+            "@@type": "Question",
             "name": "How long does a project take?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A landing page takes 3–5 days, a corporate website 7–14 days, and a custom system can range from 2–8 weeks." }
+            "acceptedAnswer": { "@@type": "Answer", "text": "A landing page takes 3–5 days, a corporate website 7–14 days, and a custom system can range from 2–8 weeks." }
         },
         {
-            "@type": "Question",
+            "@@type": "Question",
             "name": "Do you work with small businesses?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We work with businesses of all sizes, from solo founders to established companies. Our packages are flexible to fit different budgets." }
+            "acceptedAnswer": { "@@type": "Answer", "text": "Absolutely. We work with businesses of all sizes, from solo founders to established companies. Our packages are flexible to fit different budgets." }
         },
         {
-            "@type": "Question",
+            "@@type": "Question",
             "name": "Do you offer ongoing support after launch?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer post-launch support for all our web and system projects." }
+            "acceptedAnswer": { "@@type": "Answer", "text": "Yes. We offer post-launch support for all our web and system projects." }
         },
         {
-            "@type": "Question",
+            "@@type": "Question",
             "name": "How does payment work?",
-            "acceptedAnswer": { "@type": "Answer", "text": "We typically work with a 50% deposit upfront and 50% upon delivery. For larger projects, we can arrange milestone-based payments." }
+            "acceptedAnswer": { "@@type": "Answer", "text": "We typically work with a 50% deposit upfront and 50% upon delivery. For larger projects, we can arrange milestone-based payments." }
         }
     ]
 }
@@ -320,8 +320,8 @@
                 if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
                 const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-                g.addColorStop(0, `rgba(${p.color}, 0.45)`);
-                g.addColorStop(1, `rgba(${p.color}, 0)`);
+                g.addColorStop(0, 'rgba(' + p.color + ', 0.45)');
+                g.addColorStop(1, 'rgba(' + p.color + ', 0)');
                 ctx.fillStyle = g;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -402,7 +402,7 @@
         email.style.borderColor = '#00d4aa';
         msg.style.display = 'block';
         msg.style.color   = '#00d4aa';
-        msg.textContent   = `✓ Message sent! We'll reach out about ${[...contactSelected].join(', ')} within 24 hours.`;
+        msg.textContent   = '✓ Message sent! We\'ll reach out about ' + [...contactSelected].join(', ') + ' within 24 hours.';
     }
 
     // ── FAQ ACCORDION

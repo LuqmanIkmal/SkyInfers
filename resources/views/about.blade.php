@@ -482,45 +482,45 @@
 @push('jsonld')
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
+    "@@context": "https://schema.org",
+    "@@type": "AboutPage",
     "name": "About SkyInfers",
     "description": "Meet the team behind SkyInfers — a creative and tech agency in Johor Bahru, Malaysia.",
     "url": "{{ config('app.url') }}/about",
     "breadcrumb": {
-        "@type": "BreadcrumbList",
+        "@@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home",  "item": "{{ config('app.url') }}" },
-            { "@type": "ListItem", "position": 2, "name": "About", "item": "{{ config('app.url') }}/about" }
+            { "@@type": "ListItem", "position": 1, "name": "Home",  "item": "{{ config('app.url') }}" },
+            { "@@type": "ListItem", "position": 2, "name": "About", "item": "{{ config('app.url') }}/about" }
         ]
     }
 }
 </script>
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
+    "@@context": "https://schema.org",
+    "@@type": "ItemList",
     "name": "SkyInfers Team",
     "itemListElement": [
         {
-            "@type": "ListItem",
+            "@@type": "ListItem",
             "position": 1,
             "item": {
-                "@type": "Person",
+                "@@type": "Person",
                 "name": "Luqman Ikmal",
                 "jobTitle": "Technical Director",
-                "worksFor": { "@type": "Organization", "name": "SkyInfers" },
+                "worksFor": { "@@type": "Organization", "name": "SkyInfers" },
                 "knowsAbout": ["Laravel", "System Architecture", "API Development", "Web Performance"]
             }
         },
         {
-            "@type": "ListItem",
+            "@@type": "ListItem",
             "position": 2,
             "item": {
-                "@type": "Person",
+                "@@type": "Person",
                 "name": "Firas Jazmi",
                 "jobTitle": "Creative Director",
-                "worksFor": { "@type": "Organization", "name": "SkyInfers" },
+                "worksFor": { "@@type": "Organization", "name": "SkyInfers" },
                 "knowsAbout": ["Brand Identity", "Poster Design", "Video Production", "UI/UX Design"]
             }
         }
@@ -561,8 +561,8 @@
                 if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
                 const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-                g.addColorStop(0, `rgba(${p.color}, 0.45)`);
-                g.addColorStop(1, `rgba(${p.color}, 0)`);
+                g.addColorStop(0, 'rgba(' + p.color + ', 0.45)');
+                g.addColorStop(1, 'rgba(' + p.color + ', 0)');
                 ctx.fillStyle = g;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -633,7 +633,7 @@
         input.style.borderColor = '#00d4aa';
         msg.style.display = 'block';
         msg.style.color   = '#00d4aa';
-        msg.textContent   = `✓ Got it! We'll reach out about: ${[...aboutSelected].join(', ')}`;
+        msg.textContent   = '✓ Got it! We\'ll reach out about: ' + [...aboutSelected].join(', ');
     }
 
     // ── COUNT UP

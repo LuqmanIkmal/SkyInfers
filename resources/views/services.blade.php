@@ -341,44 +341,44 @@
 @push('jsonld')
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
+    "@@context": "https://schema.org",
+    "@@type": "ItemList",
     "name": "SkyInfers Services",
     "url": "{{ config('app.url') }}/services",
     "description": "Digital marketing services offered by SkyInfers in Malaysia.",
     "itemListElement": [
         {
-            "@type": "ListItem",
+            "@@type": "ListItem",
             "position": 1,
             "item": {
-                "@type": "Service",
+                "@@type": "Service",
                 "name": "Social Media Marketing",
                 "description": "We create visual content that captures attention, communicates your value, and builds a brand people remember.",
-                "provider": { "@type": "Organization", "name": "SkyInfers" },
+                "provider": { "@@type": "Organization", "name": "SkyInfers" },
                 "areaServed": "Malaysia",
                 "serviceType": "Social Media Marketing"
             }
         },
         {
-            "@type": "ListItem",
+            "@@type": "ListItem",
             "position": 2,
             "item": {
-                "@type": "Service",
+                "@@type": "Service",
                 "name": "Web Design",
                 "description": "Beautiful, conversion-focused websites including landing pages, corporate websites and e-commerce stores.",
-                "provider": { "@type": "Organization", "name": "SkyInfers" },
+                "provider": { "@@type": "Organization", "name": "SkyInfers" },
                 "areaServed": "Malaysia",
                 "serviceType": "Web Design & Development"
             }
         },
         {
-            "@type": "ListItem",
+            "@@type": "ListItem",
             "position": 3,
             "item": {
-                "@type": "Service",
+                "@@type": "Service",
                 "name": "System Development",
                 "description": "Custom-built systems including CRM, business management systems, REST APIs and web applications.",
-                "provider": { "@type": "Organization", "name": "SkyInfers" },
+                "provider": { "@@type": "Organization", "name": "SkyInfers" },
                 "areaServed": "Malaysia",
                 "serviceType": "Software Development"
             }
@@ -388,11 +388,11 @@
 </script>
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
     "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home",     "item": "{{ config('app.url') }}" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "{{ config('app.url') }}/services" }
+        { "@@type": "ListItem", "position": 1, "name": "Home",     "item": "{{ config('app.url') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Services", "item": "{{ config('app.url') }}/services" }
     ]
 }
 </script>
@@ -430,8 +430,8 @@
                 if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
                 const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-                g.addColorStop(0, `rgba(${p.color}, 0.45)`);
-                g.addColorStop(1, `rgba(${p.color}, 0)`);
+                g.addColorStop(0, 'rgba(' + p.color + ', 0.45)');
+                g.addColorStop(1, 'rgba(' + p.color + ', 0)');
                 ctx.fillStyle = g;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -538,7 +538,7 @@
         }
         input.style.borderColor = '#00d4aa';
         msg.style.display = 'block'; msg.style.color = '#00d4aa';
-        msg.textContent   = `✓ Got it! We'll reach out about: ${[...selectedServices].join(', ')}`;
+        msg.textContent   = '✓ Got it! We\'ll reach out about: ' + [...selectedServices].join(', ');
     }
 </script>
 @endpush

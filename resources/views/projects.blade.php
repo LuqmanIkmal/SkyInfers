@@ -460,16 +460,16 @@
 @push('jsonld')
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
+    "@@context": "https://schema.org",
+    "@@type": "CollectionPage",
     "name": "SkyInfers Projects & Portfolio",
     "description": "Portfolio of web design, social media marketing and system development projects by SkyInfers.",
     "url": "{{ config('app.url') }}/projects",
     "breadcrumb": {
-        "@type": "BreadcrumbList",
+        "@@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home",     "item": "{{ config('app.url') }}" },
-            { "@type": "ListItem", "position": 2, "name": "Projects", "item": "{{ config('app.url') }}/projects" }
+            { "@@type": "ListItem", "position": 1, "name": "Home",     "item": "{{ config('app.url') }}" },
+            { "@@type": "ListItem", "position": 2, "name": "Projects", "item": "{{ config('app.url') }}/projects" }
         ]
     }
 }
@@ -533,8 +533,8 @@
                 if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
                 const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-                g.addColorStop(0, `rgba(${p.color}, 0.45)`);
-                g.addColorStop(1, `rgba(${p.color}, 0)`);
+                g.addColorStop(0, 'rgba(' + p.color + ', 0.45)');
+                g.addColorStop(1, 'rgba(' + p.color + ', 0)');
                 ctx.fillStyle = g;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -659,7 +659,7 @@
         }
         input.style.borderColor = '#00d4aa';
         msg.style.display = 'block'; msg.style.color = '#00d4aa';
-        msg.textContent   = `✓ Got it! We'll reach out about: ${[...projectsSelected].join(', ')}`;
+        msg.textContent   = '✓ Got it! We\'ll reach out about: ' + [...projectsSelected].join(', ');
     }
 </script>
 @endpush
