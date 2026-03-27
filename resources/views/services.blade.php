@@ -37,10 +37,10 @@
     @php
     $services = [
         [
-            'id'      => 'web-design',
+            'id'      => 'web-development',
             'num'     => '01',
             'icon'    => '🌐',
-            'title'   => 'Web Design',
+            'title'   => 'Web Development',
             'sub'     => 'Websites that convert visitors into customers',
             'color'   => '#00d4aa',
             'rgb'     => '0,212,170',

@@ -34,7 +34,7 @@
      FILTER TABS
 ══════════════════════════════════════ --}}
 <div class="px-14 py-6 border-b border-white/[0.07] flex items-center gap-3 flex-wrap bg-bg-2">
-    @foreach(['All', 'Web Design', 'System Development'] as $filter)
+    @foreach(['All', 'Web Development', 'System Development'] as $filter)
     <button
         type="button"
         class="filter-btn px-5 py-2 rounded-full border text-sm font-medium transition-all duration-200"
@@ -54,7 +54,7 @@
     @php
     $projects = [
         [
-            'category'  => 'Web Design',
+            'category'  => 'Web Development',
             'tag'       => 'Corporate Website',
             'title'     => 'Tech23 Performance Lubricants Website',
             'desc'      => 'A high-converting product launch for a Motorcycle Performance Lubcricant. Designed to capture leads and communicate value within seconds of landing.',
@@ -82,7 +82,7 @@
             'accentpx'  => '#4f8eff',
         ],
         [
-            'category'  => 'Web Design',
+            'category'  => 'Web Development',
             'tag'       => 'Corporate Website',
             'title'     => 'ChillOutHub Digital Marketing Website',
             'desc'      => 'Full corporate website redesign for a regional consultancy firm. Multi-page, SEO-optimised, and built to impress enterprise clients from first visit.',
@@ -96,7 +96,7 @@
             'accentpx'  => '#00d4aa',
         ],
         [
-            'category'  => 'Web Design',
+            'category'  => 'Web Development',
             'tag'       => 'E-Commerce',
             'title'     => 'Nimbus Online Store',
             'desc'      => 'A full e-commerce store for a fashion brand — complete with product catalogue, cart, secure checkout, and an admin panel to manage orders and inventory.',

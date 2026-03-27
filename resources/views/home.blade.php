@@ -113,7 +113,7 @@
         [
             'num'     => '01',
             'icon'    => '🌐',
-            'title'   => 'Website Development',
+            'title'   => 'Web Development',
             'desc'    => 'Beautiful, conversion-focused websites tailored to your goals. Whether it\'s a landing page, corporate site, or full e-commerce store, we design and build it right.',
             'tags'    => ['Landing Page', 'Corporate Website', 'E-Commerce'],
             'items'   => ['Mobile Responsive', 'SEO Optimized', 'CMS Included', 'Free Domain & Hosting'],
