@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
-@section('title',       'Contact SkyInfers — Get a Free Consultation | Digital Agency Johor Bahru')
-@section('description',  'Get in touch with SkyInfers for web design, social media marketing or system development. Based in Johor Bahru, Malaysia. We reply within 24 hours.')
-@section('keywords',     'contact skyinfers, digital marketing agency contact johor bahru, web design consultation malaysia, hire web designer johor bahru, digital agency malaysia contact')
-@section('canonical',    url('/contact'))
-@section('og_title',     'Contact SkyInfers — Free Consultation')
-@section('og_description','Have a project in mind? Contact SkyInfers in Johor Bahru. We reply within 24 hours.')
+@section('title', 'Contact — SkyInfers')
 
 @section('content')
 
@@ -135,8 +130,6 @@
                     <label class="text-xs font-semibold tracking-widest uppercase text-muted mb-2 block">I'm interested in</label>
                     <div class="flex flex-wrap gap-2" id="contactServices">
                         @foreach([
-                            ['🎨', 'Graphic Design'],
-                            ['🎬', 'Video Production'],
                             ['🚀', 'Landing Page'],
                             ['🏢', 'Corporate Website'],
                             ['🛒', 'E-Commerce'],
@@ -221,52 +214,6 @@
 </section>
 
 @endsection
-@push('jsonld')
-<script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "ContactPage",
-    "name": "Contact SkyInfers",
-    "description": "Get in touch with SkyInfers for digital marketing, web design or system development services.",
-    "url": "{{ config('app.url') }}/contact",
-    "breadcrumb": {
-        "@@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@@type": "ListItem", "position": 1, "name": "Home",    "item": "{{ config('app.url') }}" },
-            { "@@type": "ListItem", "position": 2, "name": "Contact", "item": "{{ config('app.url') }}/contact" }
-        ]
-    }
-}
-</script>
-<script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@@type": "Question",
-            "name": "How long does a project take?",
-            "acceptedAnswer": { "@@type": "Answer", "text": "A landing page takes 3–5 days, a corporate website 7–14 days, and a custom system can range from 2–8 weeks." }
-        },
-        {
-            "@@type": "Question",
-            "name": "Do you work with small businesses?",
-            "acceptedAnswer": { "@@type": "Answer", "text": "Absolutely. We work with businesses of all sizes, from solo founders to established companies. Our packages are flexible to fit different budgets." }
-        },
-        {
-            "@@type": "Question",
-            "name": "Do you offer ongoing support after launch?",
-            "acceptedAnswer": { "@@type": "Answer", "text": "Yes. We offer post-launch support for all our web and system projects." }
-        },
-        {
-            "@@type": "Question",
-            "name": "How does payment work?",
-            "acceptedAnswer": { "@@type": "Answer", "text": "We typically work with a 50% deposit upfront and 50% upon delivery. For larger projects, we can arrange milestone-based payments." }
-        }
-    ]
-}
-</script>
-@endpush
 
 
 @push('scripts')
@@ -320,8 +267,8 @@
                 if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
                 const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-                g.addColorStop(0, 'rgba(' + p.color + ', 0.45)');
-                g.addColorStop(1, 'rgba(' + p.color + ', 0)');
+                g.addColorStop(0, `rgba(${p.color}, 0.45)`);
+                g.addColorStop(1, `rgba(${p.color}, 0)`);
                 ctx.fillStyle = g;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -402,7 +349,7 @@
         email.style.borderColor = '#00d4aa';
         msg.style.display = 'block';
         msg.style.color   = '#00d4aa';
-        msg.textContent   = '✓ Message sent! We\'ll reach out about ' + [...contactSelected].join(', ') + ' within 24 hours.';
+        msg.textContent   = `✓ Message sent! We'll reach out about ${[...contactSelected].join(', ')} within 24 hours.`;
     }
 
     // ── FAQ ACCORDION

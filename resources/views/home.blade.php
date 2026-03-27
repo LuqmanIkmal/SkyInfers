@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
-@section('title',       'SkyInfers — Digital Marketing Agency in Johor Bahru, Malaysia')
-@section('description',  'SkyInfers is a digital marketing agency in Johor Bahru. We offer social media marketing, professional web design and custom system development to grow your business.')
-@section('keywords',     'digital marketing agency johor bahru, web design johor bahru, social media marketing malaysia, content creation agency, system development malaysia, skyinfers')
-@section('canonical',    url('/'))
-@section('og_title',     'SkyInfers — Digital Marketing Agency in Johor Bahru')
-@section('og_description','We help businesses turn clicks into revenue. Content creation, web design and system development — all under one roof in Johor Bahru.')
+@section('title', 'SkyInfers — Web Design & System Development Agency')
 
 @section('content')
 
@@ -25,15 +20,15 @@
     {{-- TOP: Tag --}}
     <div class="hero-init opacity-0 animate-fade-up-1 inline-flex items-center gap-2 bg-accent/10 border border-accent/25 rounded-full px-4 py-1.5 text-xs text-accent font-semibold tracking-widest uppercase w-fit self-center">
         <span class="w-1.5 h-1.5 bg-accent-2 rounded-full animate-pulse-dot"></span>
-        Digital Marketing Agency
+        Web & System Development
     </div>
 
     {{-- MIDDLE: Headline + Sub + Buttons --}}
     <div class="flex flex-col gap-5 items-center text-center">
         <h1 class="hero-init opacity-0 animate-fade-up-2 font-syne font-extrabold leading-[1.05] tracking-tight"
-            style="font-size: clamp(2rem, 5vw, 4.2rem);">
+            style="font-size: clamp(2rem, 5vw, 4rem);">
             <span class="block">We help businesses</span>
-            <span class="flex flex-wrap justify-center items-center gap-2 md:gap-4 ml-0 md:ml-[80px]">
+            <span class="flex justify-center items-center gap-4" style="margin-left: 50px;">
                 <span>turn clicks into</span>
                 <span class="relative overflow-hidden inline-block" style="height:1.10em; text-align:left;" id="cycleWrap">
                     @foreach(['revenue','profits','clients','scaling','success'] as $word)
@@ -44,7 +39,7 @@
         </h1>
 
         <p class="hero-init opacity-0 animate-fade-up-3 text-muted text-base leading-relaxed max-w-lg">
-            SkyInfers combines creative content, stunning web design, and powerful system development to grow your business in the digital world.
+            SkyInfers builds stunning websites and powerful custom systems that help businesses grow, scale, and stand out in the digital world.
         </p>
 
         <div class="hero-init opacity-0 animate-fade-up-4 flex gap-4 items-center justify-center">
@@ -77,7 +72,7 @@
 <div class="border-t border-b border-white/[0.07] py-5 overflow-hidden bg-bg-2">
     <div class="flex whitespace-nowrap animate-marquee" id="marqueeTrack">
         @php
-            $items = ['Content Creation','Poster Design','Video Production','Web Design','Landing Page','Corporate Website','E-Commerce','System Development','SkyInfers'];
+            $items = ['Web Design','Landing Page','Corporate Website','E-Commerce','System Development','Laravel','React','API Development','SkyInfers'];
             $allItems = array_merge($items, $items);
         @endphp
         @foreach($allItems as $item)
@@ -102,7 +97,7 @@
                 &nbsp;Our Solutions
             </div>
             <h2 class="font-syne font-extrabold leading-tight tracking-tight" style="font-size: clamp(2rem,4vw,3.5rem);">
-                Three services,<br>one powerful team
+                Two services,<br>one powerful team
             </h2>
         </div>
         <a href="{{ url('/services') }}"
@@ -117,26 +112,16 @@
     $services = [
         [
             'num'     => '01',
-            'icon'    => '🎬',
-            'title'   => 'Social Media Marketing',
-            'desc'    => 'We craft compelling visual content that stops the scroll and tells your brand story. From eye-catching posters to high-quality videos, we make your brand impossible to ignore.',
-            'tags'    => ['Poster Design', 'Video Production', 'Brand Visuals'],
-            'items'   => ['Social Media Graphics', 'Event Posters', 'Brand Videos', 'Motion Graphics'],
-            'color'   => '79,142,255',
-            'href'    => '/services#content-creation',
-        ],
-        [
-            'num'     => '02',
             'icon'    => '🌐',
-            'title'   => 'Web Design',
-            'desc'    => 'Beautiful, conversion-focused websites tailored to your goals. Whether it\'s a landing page, corporate site, or full e-commerce store — we design and build it right.',
+            'title'   => 'Website Development',
+            'desc'    => 'Beautiful, conversion-focused websites tailored to your goals. Whether it\'s a landing page, corporate site, or full e-commerce store, we design and build it right.',
             'tags'    => ['Landing Page', 'Corporate Website', 'E-Commerce'],
             'items'   => ['Mobile Responsive', 'SEO Optimized', 'CMS Included', 'Free Domain & Hosting'],
             'color'   => '0,212,170',
             'href'    => '/services#web-design',
         ],
         [
-            'num'     => '03',
+            'num'     => '02',
             'icon'    => '⚙️',
             'title'   => 'System Development',
             'desc'    => 'Custom-built systems that streamline your operations and scale with your business. From internal tools to complex platforms, we engineer solutions that work.',
@@ -263,9 +248,9 @@
     <div class="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/[0.07]">
         @php
         $steps = [
-            ['num' => '01', 'title' => 'Discovery & Goals',   'desc' => 'We start by understanding your business, target audience, and objectives. This shapes everything we create — from content to code.',         'duration' => '1–2 Days'],
-            ['num' => '02', 'title' => 'Strategy & Planning', 'desc' => 'We map out the right approach — whether it\'s a content campaign, website structure, or system architecture.',                               'duration' => '2–3 Days'],
-            ['num' => '03', 'title' => 'Design & Build',      'desc' => 'Our team executes with precision — designing visuals, building web pages, or developing systems tailored to your exact requirements.',        'duration' => '5–14 Days'],
+            ['num' => '01', 'title' => 'Discovery & Goals',   'desc' => 'We start by understanding your business, target audience, and objectives. This shapes everything we create from content to code.',         'duration' => '1–2 Days'],
+            ['num' => '02', 'title' => 'Strategy & Planning', 'desc' => 'We map out the right approach, whether it\'s a content campaign, website structure, or system architecture.',                               'duration' => '2–3 Days'],
+            ['num' => '03', 'title' => 'Design & Build',      'desc' => 'Our team executes with precision, designing visuals, building web pages, or developing systems tailored to your exact requirements.',        'duration' => '5–14 Days'],
             ['num' => '04', 'title' => 'Launch & Support',    'desc' => 'We deliver, launch, and stay by your side. Revisions, optimizations, and ongoing support to ensure everything performs at its best.',        'duration' => '1–2 Days'],
         ];
         @endphp
@@ -311,7 +296,7 @@
         @php
         $testimonials = [
             ['initials' => 'AK', 'quote' => '"SkyInfers redesigned our entire online presence and produced our product videos. Sales increased significantly within the first month. Truly a one-stop creative team."',         'name' => 'Alex Kim',    'role' => 'CEO @ NovaTech'],
-            ['initials' => 'SR', 'quote' => '"The poster designs they created for our campaigns were stunning. Our social media engagement tripled and our brand finally looks as premium as our products."',                'name' => 'Sara Ramos',  'role' => 'Founder @ LuxBrand'],
+            ['initials' => 'SR', 'quote' => '"The system they built for us handles our entire operations. Fast, reliable, and exactly what we needed. SkyInfers delivered beyond our expectations."',                'name' => 'Sara Ramos',  'role' => 'Founder @ LuxBrand'],
             ['initials' => 'MJ', 'quote' => '"They built our e-commerce website from scratch and it\'s exactly what we envisioned. Clean, fast, and our customers love the experience. Highly recommended."',               'name' => 'Marco J.',    'role' => 'CTO @ CloudBase'],
             ['initials' => 'LP', 'quote' => '"The custom system SkyInfers developed for us automated our entire workflow. What used to take hours now takes minutes. Exceptional technical team."',                         'name' => 'Lisa Park',   'role' => 'CMO @ GrowthLab'],
             ['initials' => 'DW', 'quote' => '"From our corporate website to our content strategy, SkyInfers handled everything seamlessly. One team, zero headaches. We couldn\'t ask for a better partner."',             'name' => 'David Wu',    'role' => 'Director @ ApexCo'],
@@ -357,8 +342,6 @@
         {{-- Service Selector --}}
         <div class="flex flex-wrap justify-center gap-3 mb-10">
             @foreach([
-                ['🎨', 'Poster Design'],
-                ['🎬', 'Video Production'],
                 ['🚀', 'Landing Page'],
                 ['🏢', 'Corporate Website'],
                 ['🛒', 'E-Commerce'],
@@ -396,32 +379,8 @@
 
 @endsection
 
-@push('jsonld')
-<script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "WebSite",
-    "name": "SkyInfers",
-    "url": "{{ config('app.url') }}",
-    "description": "Digital marketing agency in Johor Bahru."
-}
-</script>
-<script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "WebPage",
-    "name": "SkyInfers — Digital Marketing Agency in Johor Bahru",
-    "url": "{{ config('app.url') }}",
-    "breadcrumb": {
-        "@@type": "BreadcrumbList",
-        "itemListElement": [{ "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ config('app.url') }}" }]
-    }
-}
-</script>
-@endpush
 
 @push('scripts')
-@verbatim
 <style>
     /* Reveal slide up */
     .reveal {
@@ -596,8 +555,7 @@
         input.style.borderColor = '#00d4aa';
         msg.style.display = 'block';
         msg.style.color   = '#00d4aa';
-        msg.textContent = '✓ Got it! We\'ll reach out about: ' + [...homeSelected].join(', ');
+        msg.textContent   = `✓ Got it! We'll reach out about: ${[...homeSelected].join(', ')}`;
     }
 </script>
-@endverbatim
 @endpush

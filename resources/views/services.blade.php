@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
-@section('title',       'Services — Social Media Marketing, Web Design & System Development | SkyInfers')
-@section('description',  'SkyInfers offers social media marketing, professional web design and custom system development for businesses in Malaysia. One team for all your digital needs.')
-@section('keywords',     'social media marketing malaysia, web design services malaysia, system development johor bahru, landing page design, e-commerce website malaysia, corporate website design, laravel development malaysia')
-@section('canonical',    url('/services'))
-@section('og_title',     'Services — SkyInfers Digital Marketing Agency')
-@section('og_description','Social media marketing, web design and system development — all under one roof. Based in Johor Bahru, Malaysia.')
+@section('title', 'Services — SkyInfers')
 
 @section('content')
 
@@ -26,10 +21,10 @@
         </div>
         <h1 class="font-syne font-extrabold leading-[1.05] tracking-tight mb-6"
             style="font-size: clamp(2rem, 5vw, 4.2rem);">
-            Services built<br>for <span class="text-accent">real growth</span>
+            Built for the<br>web that <span class="text-accent">converts</span>
         </h1>
         <p class="text-muted text-lg leading-relaxed max-w-xl mx-auto">
-            Three focused services. One integrated team. Everything you need to build, grow, and scale your brand in the digital world.
+            Two focused services. One expert team. Everything you need to design, build, and scale your digital presence.
         </p>
     </div>
 </section>
@@ -42,29 +37,8 @@
     @php
     $services = [
         [
-            'id'      => 'content-creation',
-            'num'     => '01',
-            'icon'    => '🎬',
-            'title'   => 'Social Media Marketing',
-            'sub'     => 'Content that stops the scroll',
-            'color'   => '#4f8eff',
-            'rgb'     => '79,142,255',
-            'desc'    => 'In a world full of noise, your brand needs content that truly stands out. We create visual content that captures attention, communicates your value, and builds a brand people remember from stunning posters to high-quality content feed.',
-            'tags'    => ['Poster Design', 'Video Production', 'Brand Visuals'],
-            'subservices' => [
-                [
-                    'icon'  => '🎨',
-                    'title' => 'Social Media Branding',
-                    'desc'  => 'Create a strong and consistent brand presence on social media through professionally designed content tailored to your business identity.',
-                    'items' => ['Content Feed', 'Brand-Aligned', 'Fast Turnaround'],
-                ],
-
-            ],
-            'includes' => ['Engaging Social Media Content', 'Consistent Brand Visual Style', 'Ready-to-Use Marketing Designs', 'Collaborative Revision Process', 'Quick Delivery'],
-        ],
-        [
             'id'      => 'web-design',
-            'num'     => '02',
+            'num'     => '01',
             'icon'    => '🌐',
             'title'   => 'Web Design',
             'sub'     => 'Websites that convert visitors into customers',
@@ -96,7 +70,7 @@
         ],
         [
             'id'      => 'system-development',
-            'num'     => '03',
+            'num'     => '02',
             'icon'    => '⚙️',
             'title'   => 'System Development',
             'sub'     => 'Custom systems that power your business',
@@ -268,7 +242,7 @@
         $reasons = [
             ['icon' => '🎯', 'title' => 'Results-Focused',    'desc' => 'Every decision we make, design, content, or code is tied to a business outcome. We don\'t do pretty for pretty\'s sake.'],
             ['icon' => '⚡', 'title' => 'Fast Turnaround',     'desc' => 'We work efficiently without cutting corners. Most projects are delivered faster than industry standard timelines.'],
-            ['icon' => '🔄', 'title' => 'Full Integration',    'desc' => 'Content, web, and systems, all under one roof. Everything works together because one team built it all.'],
+            ['icon' => '🔄', 'title' => 'Full Integration',    'desc' => 'Web and systems, all under one roof. Everything works together because one team built it all.'],
             ['icon' => '🤝', 'title' => 'Transparent Process', 'desc' => 'You\'ll always know where your project stands. Clear communication, regular updates, no surprises.'],
         ];
         @endphp
@@ -293,7 +267,7 @@
             Let's Build Together
         </div>
         <h2 class="font-syne font-extrabold leading-tight tracking-tight mb-4" style="font-size: clamp(2.5rem,5vw,4rem);">
-            Not sure which service<br>you need?
+            Ready to build<br>something great?
         </h2>
         <p class="text-muted text-lg mb-10">
             Pick what you're interested in and we'll reach out within 24 hours.
@@ -301,8 +275,6 @@
 
         <div class="flex flex-wrap justify-center gap-3 mb-10">
             @foreach([
-                ['🎨', 'Graphic Design'],
-                ['🎬', 'Video Production'],
                 ['🚀', 'Landing Page'],
                 ['🏢', 'Corporate Website'],
                 ['🛒', 'E-Commerce'],
@@ -338,65 +310,6 @@
 </section>
 
 @endsection
-@push('jsonld')
-<script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "ItemList",
-    "name": "SkyInfers Services",
-    "url": "{{ config('app.url') }}/services",
-    "description": "Digital marketing services offered by SkyInfers in Malaysia.",
-    "itemListElement": [
-        {
-            "@@type": "ListItem",
-            "position": 1,
-            "item": {
-                "@@type": "Service",
-                "name": "Social Media Marketing",
-                "description": "We create visual content that captures attention, communicates your value, and builds a brand people remember.",
-                "provider": { "@@type": "Organization", "name": "SkyInfers" },
-                "areaServed": "Malaysia",
-                "serviceType": "Social Media Marketing"
-            }
-        },
-        {
-            "@@type": "ListItem",
-            "position": 2,
-            "item": {
-                "@@type": "Service",
-                "name": "Web Design",
-                "description": "Beautiful, conversion-focused websites including landing pages, corporate websites and e-commerce stores.",
-                "provider": { "@@type": "Organization", "name": "SkyInfers" },
-                "areaServed": "Malaysia",
-                "serviceType": "Web Design & Development"
-            }
-        },
-        {
-            "@@type": "ListItem",
-            "position": 3,
-            "item": {
-                "@@type": "Service",
-                "name": "System Development",
-                "description": "Custom-built systems including CRM, business management systems, REST APIs and web applications.",
-                "provider": { "@@type": "Organization", "name": "SkyInfers" },
-                "areaServed": "Malaysia",
-                "serviceType": "Software Development"
-            }
-        }
-    ]
-}
-</script>
-<script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "BreadcrumbList",
-    "itemListElement": [
-        { "@@type": "ListItem", "position": 1, "name": "Home",     "item": "{{ config('app.url') }}" },
-        { "@@type": "ListItem", "position": 2, "name": "Services", "item": "{{ config('app.url') }}/services" }
-    ]
-}
-</script>
-@endpush
 
 
 @push('scripts')
@@ -430,8 +343,8 @@
                 if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
                 const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-                g.addColorStop(0, 'rgba(' + p.color + ', 0.45)');
-                g.addColorStop(1, 'rgba(' + p.color + ', 0)');
+                g.addColorStop(0, `rgba(${p.color}, 0.45)`);
+                g.addColorStop(1, `rgba(${p.color}, 0)`);
                 ctx.fillStyle = g;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -450,7 +363,7 @@
     });
 
     // ── SERVICE TAB SWITCHER
-    const colors = ['#4f8eff', '#00d4aa', '#4f8eff'];
+    const colors = ['#00d4aa', '#4f8eff'];
     let activeTab = 0;
 
     function switchTab(index) {
@@ -484,9 +397,8 @@
     // Check URL hash on load to open correct tab
     window.addEventListener('load', () => {
         const hash = window.location.hash;
-        if      (hash === '#content-creation')   switchTab(0);
-        else if (hash === '#web-design')         switchTab(1);
-        else if (hash === '#system-development') switchTab(2);
+        if      (hash === '#web-design')         switchTab(0);
+        else if (hash === '#system-development') switchTab(1);
         else                                      switchTab(0);
     });
 
@@ -538,7 +450,7 @@
         }
         input.style.borderColor = '#00d4aa';
         msg.style.display = 'block'; msg.style.color = '#00d4aa';
-        msg.textContent   = '✓ Got it! We\'ll reach out about: ' + [...selectedServices].join(', ');
+        msg.textContent   = `✓ Got it! We'll reach out about: ${[...selectedServices].join(', ')}`;
     }
 </script>
 @endpush

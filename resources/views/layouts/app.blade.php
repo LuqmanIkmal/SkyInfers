@@ -1,38 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>@yield('title', 'SkyInfers — Digital Marketing Agency in Johor Bahru, Malaysia')</title>
-    <meta name="description" content="@yield('description', 'SkyInfers is a digital marketing agency in Johor Bahru offering content creation, web design and custom system development.')">
-    <meta name="keywords"    content="@yield('keywords', 'digital marketing agency johor bahru, web design malaysia, skyinfers')">
-    <meta name="author"      content="SkyInfers">
-    <meta name="robots"      content="index, follow">
-    <link rel="canonical"    href="@yield('canonical', url()->current())">
-
-    <meta property="og:type"        content="website">
-    <meta property="og:site_name"   content="SkyInfers">
-    <meta property="og:title"       content="@yield('og_title', 'SkyInfers — Digital Marketing Agency in Johor Bahru')">
-    <meta property="og:description" content="@yield('og_description', 'Content creation, web design and system development — all under one roof.')">
-    <meta property="og:url"         content="@yield('canonical', url()->current())">
-    <meta property="og:image"       content="@yield('og_image', asset('images/og-image.jpg'))">
-    <meta property="og:locale"      content="en_MY">
-
-    <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="@yield('og_title', 'SkyInfers — Digital Marketing Agency in Johor Bahru')">
-    <meta name="twitter:description" content="@yield('og_description', 'Content creation, web design and system development — all under one roof.')">
-    <meta name="twitter:image"       content="@yield('og_image', asset('images/og-image.jpg'))">
-
-    @stack('jsonld')
-
+    <title>@yield('title', 'SkyInfers - Digital Marketing Agency')</title>
+    <meta name="description" content="@yield('description', 'SkyInfers crafts high-performance web experiences.')">
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-[#080a0f] text-[#e8eaf0] antialiased overflow-x-hidden" style="cursor:none; font-family:'DM Sans',sans-serif;">
@@ -89,7 +63,7 @@
             </p>
         </div>
         @foreach([
-            ['Services', ['Content Creation','Web Design','System Development']],
+            ['Services', ['Landing Page','Corporate Website','E-Commerce','System Development']],
             ['Company',  ['Services','About','Projects','Contact']],
             ['Connect',  ['Instagram','Facebook','Whatsapp']],
         ] as [$heading, $items])

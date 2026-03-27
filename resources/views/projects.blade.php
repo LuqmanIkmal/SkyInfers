@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
-@section('title',       'Projects — Our Work & Portfolio | SkyInfers Digital Marketing Agency')
-@section('description',  'Explore SkyInfers\'s portfolio of web design, social media marketing and system development projects. Real work, real results for businesses across Malaysia.')
-@section('keywords',     'skyinfers portfolio, web design portfolio malaysia, digital marketing projects malaysia, laravel projects, e-commerce website portfolio, corporate website examples')
-@section('canonical',    url('/projects'))
-@section('og_title',     'Projects — Portfolio | SkyInfers')
-@section('og_description','Real work, real results. A showcase of web design, content creation and system development projects by SkyInfers.')
+@section('title', 'Projects — SkyInfers')
 
 @section('content')
 
@@ -39,7 +34,7 @@
      FILTER TABS
 ══════════════════════════════════════ --}}
 <div class="px-14 py-6 border-b border-white/[0.07] flex items-center gap-3 flex-wrap bg-bg-2">
-    @foreach(['All', 'Content Creation', 'Web Design', 'System Development'] as $filter)
+    @foreach(['All', 'Web Design', 'System Development'] as $filter)
     <button
         type="button"
         class="filter-btn px-5 py-2 rounded-full border text-sm font-medium transition-all duration-200"
@@ -73,25 +68,11 @@
             'accentpx'  => '#4f8eff',
         ],
         [
-            'category'  => 'Content Creation',
-            'tag'       => 'Brand Visuals',
-            'title'     => 'LuxBrand Social Campaign',
-            'desc'      => 'A complete social media visual overhaul for a premium lifestyle brand — posters, reels covers, and story templates designed to feel luxurious and consistent.',
-            'results'   => ['+210% engagement', '3x follower growth', '15 assets delivered'],
-            'tags'      => ['Poster Design', 'Brand Identity', 'Social Media'],
-            'icon'      => '🎨',
-            'color'     => '#00d4aa',
-            'mockup'    => 'phone',
-            'image'     => null,
-            'gradient'  => 'from-[#0d1117] via-[#001a15] to-[#0d1117]',
-            'accentpx'  => '#00d4aa',
-        ],
-        [
             'category'  => 'System Development',
             'tag'       => 'Web Application',
-            'title'     => 'Fixed Deposits Tracking System',
-            'desc'      => 'A custom tracking system built from scratch that lead to a better financial decision for Vista Velocity Sdn.Bhd',
-            'results'   => ['60% faster workflows', '200+ transaction managed'],
+            'title'     => 'GrowthLab CRM System',
+            'desc'      => 'A custom CRM built from scratch for a marketing agency — managing leads, client communications, project pipelines, and automated follow-up workflows.',
+            'results'   => ['60% faster workflows', '200+ leads managed', 'Zero manual follow-ups'],
             'tags'      => ['Laravel', 'MySQL', 'REST API'],
             'icon'      => '⚙️',
             'color'     => '#4f8eff',
@@ -113,20 +94,6 @@
             'image'     => asset('images/chillout.png'),
             'gradient'  => 'from-[#0d1117] via-[#001a15] to-[#0d1117]',
             'accentpx'  => '#00d4aa',
-        ],
-        [
-            'category'  => 'Content Creation',
-            'tag'       => 'Video Production',
-            'title'     => 'CloudBase Product Video',
-            'desc'      => 'A cinematic product showcase video for a B2B SaaS platform — scripted, shot, and edited to communicate complex features in an engaging 90-second format.',
-            'results'   => ['500k+ views', '+45% demo requests', 'Used in paid ads'],
-            'tags'      => ['Video Production', 'Motion Graphics', 'Scriptwriting'],
-            'icon'      => '🎬',
-            'color'     => '#4f8eff',
-            'mockup'    => 'video',
-            'image'     => null,
-            'gradient'  => 'from-[#0d1117] via-[#0d1520] to-[#0d1117]',
-            'accentpx'  => '#4f8eff',
         ],
         [
             'category'  => 'Web Design',
@@ -420,8 +387,6 @@
 
         <div class="flex flex-wrap justify-center gap-3 mb-10">
             @foreach([
-                ['🎨', 'Graphic Design'],
-                ['🎬', 'Video Production'],
                 ['🚀', 'Landing Page'],
                 ['🏢', 'Corporate Website'],
                 ['🛒', 'E-Commerce'],
@@ -457,24 +422,6 @@
 </section>
 
 @endsection
-@push('jsonld')
-<script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "CollectionPage",
-    "name": "SkyInfers Projects & Portfolio",
-    "description": "Portfolio of web design, social media marketing and system development projects by SkyInfers.",
-    "url": "{{ config('app.url') }}/projects",
-    "breadcrumb": {
-        "@@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@@type": "ListItem", "position": 1, "name": "Home",     "item": "{{ config('app.url') }}" },
-            { "@@type": "ListItem", "position": 2, "name": "Projects", "item": "{{ config('app.url') }}/projects" }
-        ]
-    }
-}
-</script>
-@endpush
 
 
 @push('scripts')
@@ -533,8 +480,8 @@
                 if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
                 const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-                g.addColorStop(0, 'rgba(' + p.color + ', 0.45)');
-                g.addColorStop(1, 'rgba(' + p.color + ', 0)');
+                g.addColorStop(0, `rgba(${p.color}, 0.45)`);
+                g.addColorStop(1, `rgba(${p.color}, 0)`);
                 ctx.fillStyle = g;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -659,7 +606,7 @@
         }
         input.style.borderColor = '#00d4aa';
         msg.style.display = 'block'; msg.style.color = '#00d4aa';
-        msg.textContent   = '✓ Got it! We\'ll reach out about: ' + [...projectsSelected].join(', ');
+        msg.textContent   = `✓ Got it! We'll reach out about: ${[...projectsSelected].join(', ')}`;
     }
 </script>
 @endpush

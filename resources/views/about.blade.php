@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
-@section('title',       'About SkyInfers — Creative & Tech Agency in Johor Bahru, Malaysia')
-@section('description',  'Meet the team behind SkyInfers — Luqman Ikmal (Technical Director) and Firas Jazmi (Creative Director). A creative and tech agency built to grow businesses in Malaysia.')
-@section('keywords',     'about skyinfers, digital agency johor bahru, luqman ikmal, firas jazmi, creative tech agency malaysia, web design team johor bahru')
-@section('canonical',    url('/about'))
-@section('og_title',     'About SkyInfers — The Team Behind Every Project')
-@section('og_description','SkyInfers is led by a technical director and creative director working together to deliver results. Based in Johor Bahru, Malaysia.')
+@section('title', 'About — SkyInfers')
 
 @section('content')
 
@@ -29,10 +24,10 @@
         </div>
         <h1 class="font-syne font-extrabold leading-[1.05] tracking-tight mb-6"
             style="font-size: clamp(2rem, 5vw, 4.2rem);">
-            Built by creators,<br>driven by <span class="text-accent">results</span>
+            Built by builders,<br>driven by <span class="text-accent">results</span>
         </h1>
         <p class="text-muted text-lg leading-relaxed max-w-xl mx-auto">
-            SkyInfers is a creative and tech agency that helps businesses grow through content, design, and custom systems, all under one roof.
+            SkyInfers is a web & system development agency that helps businesses grow through stunning websites and powerful custom systems, all under one roof.
         </p>
     </div>
 </section>
@@ -49,15 +44,15 @@
             &nbsp;Our Teams&nbsp;
         </div>
         <h2 class="font-syne font-extrabold leading-tight tracking-tight" style="font-size: clamp(2rem,4vw,3.2rem);">
-            The people behind<br>every project
+            The person behind<br>every project
         </h2>
     </div>
 
     {{-- Team Cards --}}
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-0.5">
+    <div class="grid grid-cols-1 gap-0.5">
 
         {{-- ── TECHNICAL DIRECTOR ── --}}
-        <div class="reveal group relative bg-surface border border-white/[0.07] rounded-l-2xl overflow-hidden hover:border-accent/30 transition-all duration-500">
+        <div class="reveal group relative bg-surface border border-white/[0.07] rounded-2xl overflow-hidden hover:border-accent/30 transition-all duration-500">
 
             {{-- Glow on hover --}}
             <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -129,83 +124,12 @@
             </div>
         </div>
 
-        {{-- ── CREATIVE DIRECTOR ── --}}
-        <div class="reveal reveal-delay-1 group relative bg-surface border border-white/[0.07] rounded-r-2xl overflow-hidden hover:border-accent-2/30 transition-all duration-500">
-
-            {{-- Glow on hover --}}
-            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                 style="background: radial-gradient(ellipse at top right, rgba(0,212,170,0.06) 0%, transparent 60%);"></div>
-
-            {{-- Right accent bar --}}
-            <div class="absolute right-0 top-0 w-[3px] h-0 group-hover:h-full transition-all duration-500 ease-out rounded-l-full"
-                 style="background: linear-gradient(to bottom, #00d4aa, rgba(0,212,170,0.1));"></div>
-
-            <div class="relative p-10">
-
-                {{-- Photo --}}
-                <div class="relative mb-8 overflow-hidden rounded-2xl"
-                     style="height: 380px;">
-                    
-                     <img src="{{ asset('images/CMO.png') }}"
-                     class="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-all duration-500">
-
-                    <div class="w-full h-full flex flex-col items-center justify-center gap-3 transition-all duration-500 group-hover:scale-[1.02]"
-                         style="background: linear-gradient(135deg, #1a2030 0%, #001a15 50%, #131720 100%);">
-
-                        <div class="relative flex flex-col items-center">
-                            <div class="w-24 h-24 rounded-full mb-3 flex items-center justify-center text-4xl"
-                                 style="background: rgba(0,212,170,0.12); border: 2px solid rgba(0,212,170,0.2);">
-                                🎨
-                            </div>
-                            <div class="w-40 h-2.5 rounded-full mb-2" style="background:rgba(255,255,255,0.06);"></div>
-                            <div class="w-28 h-2 rounded-full" style="background:rgba(255,255,255,0.04);"></div>
-                        </div>
-
-                        <div class="absolute inset-0 flex items-end justify-center pb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="text-center">
-                                <p class="text-white/40 text-xs">Replace with your photo</p>
-                                <p class="text-accent/60 text-xs font-mono mt-1">asset('images/CMO.png')</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
-                         style="background: linear-gradient(to top, #1a2030, transparent);"></div>
-                </div>
-
-                {{-- Info --}}
-                <div class="flex items-start justify-between gap-4 mb-4">
-                    <div>
-                        <div class="text-xs font-bold tracking-widest uppercase mb-2" style="color:#00d4aa;">Creative Director</div>
-                        <h3 class="font-syne font-extrabold text-2xl tracking-tight group-hover:text-white transition-colors duration-300">Firas Jazmi</h3>
-                    </div>
-                    <div class="flex gap-2 mt-1">
-                        <a href="#" class="w-8 h-8 rounded-full border border-white/[0.07] flex items-center justify-center text-muted no-underline text-xs font-bold transition-all duration-200"
-                           style="" onmouseover="this.style.borderColor='rgba(0,212,170,0.4)';this.style.color='#00d4aa';" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.color='#6b7280';">in</a>
-                        <a href="#" class="w-8 h-8 rounded-full border border-white/[0.07] flex items-center justify-center text-muted no-underline text-xs font-bold transition-all duration-200"
-                           style="" onmouseover="this.style.borderColor='rgba(0,212,170,0.4)';this.style.color='#00d4aa';" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.color='#6b7280';">ig</a>
-                    </div>
-                </div>
-
-                <p class="text-muted text-sm leading-relaxed mb-6">
-                    The creative force shaping how SkyInfers looks and feels. With a sharp eye for aesthetics and deep expertise in brand storytelling, he transforms ideas into visuals that people remember from a single logo or poster to an entire brand identity.
-                </p>
-
-                {{-- Expertise tags --}}
-                <div class="flex flex-wrap gap-2">
-                    @foreach(['Brand Identity', 'Poster Design', 'Video Production', 'UI/UX Design'] as $tag)
-                    <span class="text-xs px-3 py-1.5 rounded-full border font-medium"
-                          style="border-color:rgba(0,212,170,0.2); color:rgba(0,212,170,0.8); background:rgba(0,212,170,0.06);">{{ $tag }}</span>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     {{-- Bottom quote --}}
     <div class="reveal mt-0.5 bg-surface border border-white/[0.07] rounded-b-2xl px-12 py-10 text-center">
         <p class="font-syne font-extrabold text-xl tracking-tight text-white/60 max-w-2xl mx-auto" style="font-size:clamp(1rem,2vw,1.4rem);">
-            "Together we cover both sides of the equation, <span class="text-accent">the technical</span> and <span class="text-accent-2">the creative, </span>so nothing falls through the cracks."
+            "Every website and system we build is crafted with <span class="text-accent">precision, performance,</span> and a genuine care for your business outcomes."
         </p>
     </div>
 </section>
@@ -226,10 +150,10 @@
                 We started with one<br>simple belief
             </h2>
             <p class="text-muted text-base leading-relaxed mb-5">
-                Great businesses deserve great digital presence. But too often, companies are forced to juggle multiple agencies, one for design, one for development, another for content. The result? Inconsistent branding, poor communication, and wasted budget.
+                Great businesses deserve great digital presence. But too often, companies are forced to juggle multiple agencies, one for design and another for development. The result? Inconsistent output, poor communication, and wasted budget.
             </p>
             <p class="text-muted text-base leading-relaxed mb-5">
-                SkyInfers was built to solve that. We bring content creation, web design, and system development together under one team, so everything we build works together seamlessly, from the first poster to the last line of code.
+                SkyInfers was built to solve that. We bring web design and system development together under one team, so everything we build works together seamlessly, from the first pixel to the last line of code.
             </p>
             <p class="text-muted text-base leading-relaxed">
                 We're not just a vendor. We're a growth partner that's genuinely invested in your success.
@@ -273,14 +197,14 @@
         </h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-0.5">
+    <div class="grid grid-cols-1 gap-0.5">
         {{-- Mission --}}
         <div class="reveal bg-surface border border-white/[0.07] rounded-l-2xl p-12 hover:border-accent/25 transition-all duration-300">
             <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-3xl mb-8">🎯</div>
             <div class="text-accent text-xs font-bold tracking-widest uppercase mb-4">Our Mission</div>
             <h3 class="font-syne font-extrabold text-2xl tracking-tight mb-5">To make exceptional digital work accessible</h3>
             <p class="text-muted text-base leading-relaxed">
-                We exist to give every business regardless of size, access to the kind of creative and technical work that drives real growth. No fluff, no overpriced retainers. Just honest work that delivers results.
+                We exist to give every business regardless of size, access to the kind of technical and design work that drives real growth. No fluff, no overpriced retainers. Just honest work that delivers results.
             </p>
         </div>
 
@@ -322,7 +246,7 @@
             [
                 'icon'   => '🔥',
                 'title'  => 'Quality Without Compromise',
-                'desc'   => 'We hold every deliverable to a high standard. Whether it\'s a social media poster or a full system build, we don\'t ship anything we\'re not proud of.',
+                'desc'   => 'We hold every deliverable to a high standard. Whether it\'s a landing page or a full custom system, we don\'t ship anything we\'re not proud of.',
                 'color'  => 'accent',
             ],
             [
@@ -382,7 +306,7 @@
                 Everything in one place,<br>done right
             </h2>
             <p class="text-muted text-base leading-relaxed mb-10">
-                Most businesses deal with fragmented teams, a freelancer for design, an agency for development, another for content. With SkyInfers, you get one cohesive team that communicates internally and delivers work that actually fits together.
+                Most businesses deal with fragmented teams, a freelancer for design and a separate agency for development. With SkyInfers, you get one cohesive team that communicates internally and delivers work that actually fits together.
             </p>
             <a href="{{ url('/services') }}"
                class="bg-accent hover:bg-[#3a7bef] text-white px-8 py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(79,142,255,0.3)] no-underline inline-block">
@@ -441,8 +365,6 @@
         {{-- Service Selector --}}
         <div class="flex flex-wrap justify-center gap-3 mb-10">
             @foreach([
-                ['🎨', 'Graphic Design'],
-                ['🎬', 'Video Production'],
                 ['🚀', 'Landing Page'],
                 ['🏢', 'Corporate Website'],
                 ['🛒', 'E-Commerce'],
@@ -479,55 +401,6 @@
 </section>
 
 @endsection
-@push('jsonld')
-<script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "AboutPage",
-    "name": "About SkyInfers",
-    "description": "Meet the team behind SkyInfers — a creative and tech agency in Johor Bahru, Malaysia.",
-    "url": "{{ config('app.url') }}/about",
-    "breadcrumb": {
-        "@@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@@type": "ListItem", "position": 1, "name": "Home",  "item": "{{ config('app.url') }}" },
-            { "@@type": "ListItem", "position": 2, "name": "About", "item": "{{ config('app.url') }}/about" }
-        ]
-    }
-}
-</script>
-<script type="application/ld+json">
-{
-    "@@context": "https://schema.org",
-    "@@type": "ItemList",
-    "name": "SkyInfers Team",
-    "itemListElement": [
-        {
-            "@@type": "ListItem",
-            "position": 1,
-            "item": {
-                "@@type": "Person",
-                "name": "Luqman Ikmal",
-                "jobTitle": "Technical Director",
-                "worksFor": { "@@type": "Organization", "name": "SkyInfers" },
-                "knowsAbout": ["Laravel", "System Architecture", "API Development", "Web Performance"]
-            }
-        },
-        {
-            "@@type": "ListItem",
-            "position": 2,
-            "item": {
-                "@@type": "Person",
-                "name": "Firas Jazmi",
-                "jobTitle": "Creative Director",
-                "worksFor": { "@@type": "Organization", "name": "SkyInfers" },
-                "knowsAbout": ["Brand Identity", "Poster Design", "Video Production", "UI/UX Design"]
-            }
-        }
-    ]
-}
-</script>
-@endpush
 
 
 @push('scripts')
@@ -561,8 +434,8 @@
                 if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
                 const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-                g.addColorStop(0, 'rgba(' + p.color + ', 0.45)');
-                g.addColorStop(1, 'rgba(' + p.color + ', 0)');
+                g.addColorStop(0, `rgba(${p.color}, 0.45)`);
+                g.addColorStop(1, `rgba(${p.color}, 0)`);
                 ctx.fillStyle = g;
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -633,7 +506,7 @@
         input.style.borderColor = '#00d4aa';
         msg.style.display = 'block';
         msg.style.color   = '#00d4aa';
-        msg.textContent   = '✓ Got it! We\'ll reach out about: ' + [...aboutSelected].join(', ');
+        msg.textContent   = `✓ Got it! We'll reach out about: ${[...aboutSelected].join(', ')}`;
     }
 
     // ── COUNT UP
