@@ -89,9 +89,9 @@
         [
             'category'  => 'System Development',
             'tag'       => 'Web Application',
-            'title'     => 'GrowthLab CRM System',
-            'desc'      => 'A custom CRM built from scratch for a marketing agency — managing leads, client communications, project pipelines, and automated follow-up workflows.',
-            'results'   => ['60% faster workflows', '200+ leads managed', 'Zero manual follow-ups'],
+            'title'     => 'Fixed Deposits Tracking System',
+            'desc'      => 'A custom tracking system built from scratch that lead to a better financial decision for Vista Velocity Sdn.Bhd',
+            'results'   => ['60% faster workflows', '200+ transaction managed'],
             'tags'      => ['Laravel', 'MySQL', 'REST API'],
             'icon'      => '⚙️',
             'color'     => '#4f8eff',
