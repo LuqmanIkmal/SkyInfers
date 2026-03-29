@@ -22,7 +22,7 @@
 
         {{-- Logo --}}
         <a href="{{ url('/') }}" class="flex-shrink-0">
-            <img src="{{ asset('images/logoWhite.png') }}" alt="SkyInfers" style="height:27px; width:auto;">
+            <img src="{{ asset('images/logoWhite.png') }}" alt="SkyInfers" style="height:24px; width:auto;">
         </a>
 
         {{-- Desktop Nav Links --}}
@@ -104,7 +104,7 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-10">
             {{-- Brand col — full width on smallest screens --}}
             <div class="col-span-2 md:col-span-1">
-                <a href="{{ url('/') }}" style="display:block;margin-bottom:16px;margin-left:-10px;">
+                <a href="{{ url('/') }}" style="display:block;margin-bottom:16px;">
                     <img src="{{ asset('images/logoWhite.png') }}" alt="SkyInfers" style="height:24px; width:auto;">
                 </a>
                 <p style="color:#6b7280;font-size:.88rem;line-height:1.7;max-width:240px;">
@@ -112,16 +112,34 @@
                 </p>
             </div>
 
-            @foreach([
-                ['Services', ['Landing Page','Corporate Website','E-Commerce','System Development']],
-                ['Company',  ['Services','About','Projects','Contact']],
-                ['Connect',  ['Instagram','TikTok','Facebook','Whatsapp']],
-            ] as [$heading, $items])
+            @php
+            $footerLinks = [
+                ['Services', [
+                    ['Landing Page',        '#'],
+                    ['Corporate Website',   '#'],
+                    ['E-Commerce',          '#'],
+                    ['System Development',  '#'],
+                ]],
+                ['Company', [
+                    ['Services',  url('/services')],
+                    ['About',     url('/about')],
+                    ['Projects',  url('/projects')],
+                    ['Contact',   url('/contact')],
+                ]],
+                ['Connect', [
+                    ['Instagram', 'https://www.instagram.com/skyinfers'],
+                    ['Facebook',  'https://www.facebook.com/people/Sky-Infers/61577502219825/'],
+                    ['TikTok',    'https://www.tiktok.com/@skyinfers.web.sys?_r=1&_t=ZS-956IKx9o6YX'],
+                    ['WhatsApp',  'https://wa.me/601170237694'],
+                ]],
+            ];
+            @endphp
+            @foreach($footerLinks as [$heading, $items])
             <div>
                 <h4 style="font-family:'Syne',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4b5563;margin-bottom:16px;">{{ $heading }}</h4>
                 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
-                    @foreach($items as $item)
-                        <li><a href="#" style="color:#6b7280;text-decoration:none;font-size:.85rem;transition:color .2s;" onmouseover="this.style.color='#e8eaf0'" onmouseout="this.style.color='#6b7280'">{{ $item }}</a></li>
+                    @foreach($items as [$label, $href])
+                        <li><a href="{{ $href }}" {{ in_array($href, ['#']) ? '' : 'target="_blank" rel="noopener"' }} style="color:#6b7280;text-decoration:none;font-size:.85rem;transition:color .2s;" onmouseover="this.style.color='#e8eaf0'" onmouseout="this.style.color='#6b7280'">{{ $label }}</a></li>
                     @endforeach
                 </ul>
             </div>
@@ -130,7 +148,7 @@
 
         <div style="border-top:1px solid rgba(255,255,255,0.07);margin-top:40px;padding-top:24px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:.8rem;color:#6b7280;">
             <span>© {{ date('Y') }} SkyInfers. All rights reserved.</span>
-            <span>Built with precision &amp; purpose</span>
+            <span>Built with precision &amp; purpose ✦</span>
         </div>
     </footer>
 

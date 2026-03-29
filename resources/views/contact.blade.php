@@ -74,17 +74,19 @@
                 <div class="flex flex-wrap gap-2 sm:gap-3">
                     @php
                     $socials = [
-                        ['label' => 'Instagram', 'href' => '#'],
-                        ['label' => 'TikTok',    'href' => '#'],
-                        ['label' => 'Facebook',  'href' => '#'],
-                        ['label' => 'WhatsApp',  'href' => '#'],
+                        ['label' => 'Instagram', 'href' => 'https://www.instagram.com/skyinfers', 'target' => '_blank'],
+                        ['label' => 'TikTok',    'href' => 'https://www.tiktok.com/@skyinfers.web.sys?_r=1&_t=ZS-956IKx9o6YX'],
+                        ['label' => 'Facebook',  'href' => 'https://www.facebook.com/people/Sky-Infers/61577502219825/'],
+                        ['label' => 'WhatsApp',  'href' => 'https://wa.me/601170237696'],
                     ];
                     @endphp
                     @foreach($socials as $s)
-                    <a href="{{ $s['href'] }}"
-                       class="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 bg-surface border border-white/[0.07] rounded-lg sm:rounded-xl text-muted text-xs font-semibold hover:border-accent/40 hover:text-white transition-all duration-200 no-underline">
-                        <span>{{ $s['label'] }}</span>
-                    </a>
+                    <a href="{{ $s['href'] }}" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 bg-surface border border-white/[0.07] rounded-lg sm:rounded-xl text-muted text-xs font-semibold hover:border-accent/40 hover:text-white transition-all duration-200 no-underline">
+                            <span>{{ $s['label'] }}</span>
+                        </a>
                     @endforeach
                 </div>
             </div>
