@@ -40,13 +40,13 @@
             SkyInfers builds stunning websites and powerful custom systems that help businesses grow, scale, and stand out in the digital world.
         </p>
 
-        <div class="hero-init opacity-0 animate-fade-up-4 flex flex-col sm:flex-row gap-3 items-center justify-center w-full sm:w-auto px-4 sm:px-0">
+        <div class="hero-init opacity-0 animate-fade-up-4 flex flex-row gap-3 items-center justify-center flex-wrap">
             <a href="#services"
-               class="w-full sm:w-auto text-center bg-accent hover:bg-[#3a7bef] text-white px-8 py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(79,142,255,0.3)] no-underline">
+            class="bg-accent hover:bg-[#3a7bef] text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(79,142,255,0.3)] no-underline whitespace-nowrap">
                 Explore Services
             </a>
             <a href="#cta"
-               class="w-full sm:w-auto text-center border border-white/[0.07] hover:border-white/25 hover:bg-white/[0.04] text-[#e8eaf0] px-8 py-3.5 rounded-xl font-medium text-sm flex items-center justify-center gap-2 transition-all duration-200 no-underline">
+            class="border border-white/[0.07] hover:border-white/25 hover:bg-white/[0.04] text-[#e8eaf0] px-6 py-3 rounded-xl font-medium text-sm flex items-center gap-2 transition-all duration-200 no-underline whitespace-nowrap">
                 Start a Project
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
