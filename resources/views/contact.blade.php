@@ -74,16 +74,15 @@
                 <div class="flex flex-wrap gap-2 sm:gap-3">
                     @php
                     $socials = [
-                        ['label' => 'Instagram', 'href' => '#', 'icon' => '📸'],
-                        ['label' => 'LinkedIn',  'href' => '#', 'icon' => '💼'],
-                        ['label' => 'TikTok',    'href' => '#', 'icon' => '🎵'],
-                        ['label' => 'Facebook',  'href' => '#', 'icon' => '👥'],
+                        ['label' => 'Instagram', 'href' => '#'],
+                        ['label' => 'TikTok',    'href' => '#'],
+                        ['label' => 'Facebook',  'href' => '#'],
+                        ['label' => 'WhatsApp',  'href' => '#'],
                     ];
                     @endphp
                     @foreach($socials as $s)
                     <a href="{{ $s['href'] }}"
                        class="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-2.5 bg-surface border border-white/[0.07] rounded-lg sm:rounded-xl text-muted text-xs font-semibold hover:border-accent/40 hover:text-white transition-all duration-200 no-underline">
-                        <span>{{ $s['icon'] }}</span>
                         <span>{{ $s['label'] }}</span>
                     </a>
                     @endforeach
