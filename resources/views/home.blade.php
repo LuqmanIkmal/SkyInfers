@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'SkyInfers — Web Design & System Development Agency')
+@section('title', 'SkyInfers — Web & System Development Agency')
 
 @section('content')
 

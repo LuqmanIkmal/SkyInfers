@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'SkyInfers - Digital Marketing Agency')</title>
+    <title>@yield('title', 'SkyInfers - Web & System Solutions')</title>
     <meta name="description" content="@yield('description', 'SkyInfers crafts high-performance web experiences.')">
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
