@@ -19,7 +19,7 @@
     <meta property="og:title"       content="@yield('og_title', 'SkyInfers — Web Design & System Development | Johor Bahru')">
     <meta property="og:description" content="@yield('og_description', 'Web design and system development agency in Johor Bahru. We build websites and custom systems that grow your business.')">
     <meta property="og:url"         content="@yield('canonical', url()->current())">
-    <meta property="og:image"       content="@yield('og_image', asset('images/og-image.jpg'))">
+    <meta property="og:image"       content="@yield('og_image', asset('images/og_image.png'))">
     <meta property="og:image:width"  content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale"      content="en_MY">
