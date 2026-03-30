@@ -21,3 +21,5 @@ Route::get('/projects', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::post('/send-inquiry', [App\Http\Controllers\InquiryController::class, 'send']);
