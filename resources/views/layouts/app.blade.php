@@ -22,7 +22,7 @@
 
         {{-- Logo --}}
         <a href="{{ url('/') }}" class="flex-shrink-0">
-            <img src="{{ asset('images/logoWhite.png') }}" alt="SkyInfers" style="height:24px; width:auto;">
+            <img src="{{ asset('images/logoWhite.png') }}" alt="SkyInfers" style="height:27px; width:auto;">
         </a>
 
         {{-- Desktop Nav Links --}}
