@@ -51,7 +51,7 @@
         </ul>
 
         {{-- Desktop CTA --}}
-        <a href="#cta" class="hidden md:inline-flex" style="background:#4f8eff;color:#fff;padding:10px 24px;border-radius:8px;font-size:.9rem;font-weight:600;text-decoration:none;transition:all .2s;" onmouseover="this.style.background='#3a7bef'" onmouseout="this.style.background='#4f8eff'">
+        <a href="/contact" class="hidden md:inline-flex" style="background:#4f8eff;color:#fff;padding:10px 24px;border-radius:8px;font-size:.9rem;font-weight:600;text-decoration:none;transition:all .2s;" onmouseover="this.style.background='#3a7bef'" onmouseout="this.style.background='#4f8eff'">
             Free Consultation
         </a>
 
@@ -87,7 +87,7 @@
         </div>
 
         <div class="px-4 pb-8">
-            <a href="#cta"
+            <a href="/contact"
                id="mobile-cta"
                class="block text-center w-full py-3.5 rounded-xl font-semibold text-base no-underline transition-all duration-200"
                style="background:#4f8eff;color:#fff;">
@@ -104,7 +104,7 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-10">
             {{-- Brand col — full width on smallest screens --}}
             <div class="col-span-2 md:col-span-1">
-                <a href="{{ url('/') }}" style="display:block;margin-bottom:16px;">
+                <a href="{{ url('/') }}" style="display:block;margin-bottom:16px;margin-left:-10px;">
                     <img src="{{ asset('images/logoWhite.png') }}" alt="SkyInfers" style="height:24px; width:auto;">
                 </a>
                 <p style="color:#6b7280;font-size:.88rem;line-height:1.7;max-width:240px;">
@@ -115,10 +115,10 @@
             @php
             $footerLinks = [
                 ['Services', [
-                    ['Landing Page',        '#'],
-                    ['Corporate Website',   '#'],
-                    ['E-Commerce',          '#'],
-                    ['System Development',  '#'],
+                    ['Landing Page',        '/projects'],
+                    ['Corporate Website',   '/projects'],
+                    ['E-Commerce',          '/projects'],
+                    ['System Development',  '/projects'],
                 ]],
                 ['Company', [
                     ['Services',  url('/services')],
@@ -139,7 +139,15 @@
                 <h4 style="font-family:'Syne',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4b5563;margin-bottom:16px;">{{ $heading }}</h4>
                 <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
                     @foreach($items as [$label, $href])
-                        <li><a href="{{ $href }}" {{ in_array($href, ['#']) ? '' : 'target="_blank" rel="noopener"' }} style="color:#6b7280;text-decoration:none;font-size:.85rem;transition:color .2s;" onmouseover="this.style.color='#e8eaf0'" onmouseout="this.style.color='#6b7280'">{{ $label }}</a></li>
+                    <li>
+                        <a href="{{ $href }}"
+                        {{ $heading === 'Connect' ? 'target="_blank" rel="noopener"' : '' }}
+                        style="color:#6b7280;text-decoration:none;font-size:.85rem;transition:color .2s;"
+                        onmouseover="this.style.color='#e8eaf0'"
+                        onmouseout="this.style.color='#6b7280'">
+                            {{ $label }}
+                        </a>
+                    </li>
                     @endforeach
                 </ul>
             </div>
@@ -147,8 +155,13 @@
         </div>
 
         <div style="border-top:1px solid rgba(255,255,255,0.07);margin-top:40px;padding-top:24px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:.8rem;color:#6b7280;">
+        <div style="display:flex;flex-direction:column;gap:4px;">
             <span>© {{ date('Y') }} SkyInfers. All rights reserved.</span>
-            <span>Built with precision &amp; purpose ✦</span>
+            <span style="font-size:.75rem;color:#4b5563;">
+                Sky Infers Enterprise (003835267-M)
+            </span>
+        </div>
+            <span>Built with precision &amp; purpose</span>
         </div>
     </footer>
 

@@ -43,7 +43,7 @@
             'desc'    => 'Beautiful, conversion-focused websites tailored to your goals. Whether it\'s a landing page, corporate site, or full e-commerce store, we design and build it right. Every site is mobile responsive, SEO-optimized, and built to perform.',
             'tags'    => ['Landing Page', 'Corporate Website', 'E-Commerce'],
             'subservices' => [
-                ['icon' => '🚀', 'title' => 'Landing Page',      'desc' => 'High-converting single pages designed with one goal — turning visitors into leads or customers.', 'items' => ['Lead Generation', 'Product Launch', 'Campaign Pages', 'A/B Tested Layouts']],
+                ['icon' => '🚀', 'title' => 'Landing Page',      'desc' => 'High-converting single pages designed with one goal, turning visitors into leads or customers.', 'items' => ['Lead Generation', 'Product Launch', 'Campaign Pages', 'A/B Tested Layouts']],
                 ['icon' => '🏢', 'title' => 'Corporate Website', 'desc' => 'Professional multi-page websites that build credibility and showcase your business.',              'items' => ['Multi-page Structure', 'About & Team Pages', 'Services Showcase', 'Contact & Forms']],
                 ['icon' => '🛒', 'title' => 'E-Commerce',        'desc' => 'Revenue-generating online stores built to convert, from product discovery to checkout.',           'items' => ['Product Catalogue', 'Secure Checkout', 'Payment Integration', 'Inventory Management']],
             ],

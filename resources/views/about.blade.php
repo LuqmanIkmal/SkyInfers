@@ -44,7 +44,7 @@
                 Great businesses deserve great digital presence. But too often, companies are forced to juggle multiple agencies, one for design and another for development. The result? Inconsistent output, poor communication, and wasted budget.
             </p>
             <p class="text-muted text-sm sm:text-base leading-relaxed mb-4 sm:mb-5">
-                SkyInfers was built to solve that. We bring web design and system development together under one team, so everything we build works together seamlessly — from the first pixel to the last line of code.
+                SkyInfers was built to solve that. We bring web design and system development together under one team, so everything we build works together seamlessly from the first pixel to the last line of code.
             </p>
             <p class="text-muted text-sm sm:text-base leading-relaxed">
                 We're not just a vendor. We're a growth partner that's genuinely invested in your success.
@@ -95,7 +95,7 @@
             <div class="text-accent text-xs font-bold tracking-widest uppercase mb-3 sm:mb-4">Our Mission</div>
             <h3 class="font-syne font-extrabold text-xl sm:text-2xl tracking-tight mb-4 sm:mb-5">To make exceptional digital work accessible</h3>
             <p class="text-muted text-sm sm:text-base leading-relaxed">
-                We exist to give every business — regardless of size — access to the kind of technical and design work that drives real growth. No fluff, no overpriced retainers. Just honest work that delivers results.
+                We exist to give every business regardless of size, access to the kind of technical and design work that drives real growth. No fluff, no overpriced retainers. Just honest work that delivers results.
             </p>
         </div>
         <div class="reveal bg-surface border border-white/[0.07] rounded-b-2xl sm:rounded-b-none sm:rounded-r-2xl p-7 sm:p-10 lg:p-12 hover:border-accent/25 transition-all duration-300">
@@ -103,7 +103,7 @@
             <div class="text-accent-2 text-xs font-bold tracking-widest uppercase mb-3 sm:mb-4">Our Vision</div>
             <h3 class="font-syne font-extrabold text-xl sm:text-2xl tracking-tight mb-4 sm:mb-5">To be the go-to digital partner in Southeast Asia</h3>
             <p class="text-muted text-sm sm:text-base leading-relaxed">
-                We're building towards a future where SkyInfers is the first name businesses think of when they want to grow online — known for quality, speed, and a team that genuinely cares about outcomes.
+                We're building towards a future where SkyInfers is the first name businesses think of when they want to grow online, known for quality, speed, and a team that genuinely cares about outcomes.
             </p>
         </div>
     </div>
@@ -162,7 +162,7 @@
                 Everything in one place,<br>done right
             </h2>
             <p class="text-muted text-sm sm:text-base leading-relaxed mb-8 sm:mb-10">
-                Most businesses deal with fragmented teams — a freelancer for design and a separate agency for development. With SkyInfers, you get one cohesive team that delivers work that actually fits together.
+                Most businesses deal with fragmented teams, a freelancer for design and a separate agency for development. With SkyInfers, you get one cohesive team that delivers work that actually fits together.
             </p>
             <a href="{{ url('/services') }}"
                class="bg-accent hover:bg-[#3a7bef] text-white px-7 sm:px-8 py-3 sm:py-3.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(79,142,255,0.3)] no-underline inline-block">
