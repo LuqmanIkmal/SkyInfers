@@ -17,8 +17,8 @@ class InquiryController extends Controller
 
         $email    = $request->email;
         $services = $request->services;
-        $name     = $request->name ?? 'there';
-        $message  = $request->message ?? '';
+        $name     = $request->name ?? 'Sir/Madam';
+        $message  = $request->message ?? 'From CTA';
 
         // Email to YOU
         Mail::raw(
