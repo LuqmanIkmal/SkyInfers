@@ -138,7 +138,7 @@
             {{ $i === 2 ? 'sm:rounded-tr-2xl' : '' }}
             {{ $i === 1 ? 'rounded-tr-2xl sm:rounded-none' : '' }}
             {{ $i === 3 ? 'rounded-bl-2xl sm:rounded-none' : '' }}
-            {{ $i === 4 ? 'sm:rounded-bl-2xl' : '' }}
+            {{ $i === 4 ? '' : '' }}
             {{ $i === 5 ? 'rounded-br-2xl' : '' }}
             p-6 sm:p-8 lg:p-10 hover:border-accent/25 hover:-translate-y-0.5 transition-all duration-300">
             <div class="w-10 h-10 sm:w-12 sm:h-12 bg-accent/10 rounded-xl flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6">{{ $v['icon'] }}</div>

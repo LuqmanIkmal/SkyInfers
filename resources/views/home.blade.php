@@ -161,7 +161,7 @@
                 </div>
 
                 {{-- Features + CTA --}}
-                <div class="flex flex-col justify-between px-5 sm:px-8 md:px-10 py-6 md:py-10 md:min-w-[220px]">
+                <div class="flex flex-col justify-between px-5 sm:px-8 md:px-10 py-6 md:py-10 md:w-[270px] md:flex-shrink-0">
                     <ul class="flex flex-col gap-2 sm:gap-2.5 mb-6 md:mb-8">
                         @foreach($s['items'] as $item)
                         <li class="flex items-center gap-3 text-sm text-muted">
