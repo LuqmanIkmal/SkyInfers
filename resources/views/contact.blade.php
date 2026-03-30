@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Contact — SkyInfers')
+@section('title',       'Contact SkyInfers — Free Consultation | Web Design & System Development Johor Bahru')
+@section('description',  'Contact SkyInfers for web design or system development. Based in Johor Bahru, Malaysia. Free consultation, reply within 24 hours. WhatsApp: +60117-023-7694')
+@section('keywords',     'contact skyinfers, web design consultation johor bahru, hire web developer malaysia, system development inquiry, free consultation web design malaysia')
+@section('canonical',    url('/contact'))
+@section('og_title',     'Contact SkyInfers — Free Consultation')
+@section('og_description','Have a project in mind? Contact SkyInfers in Johor Bahru. Free consultation, reply within 24 hours.')
 
 @section('content')
 
@@ -188,6 +193,36 @@
 </section>
 
 @endsection
+@push('jsonld')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "ContactPage",
+    "name": "Contact SkyInfers",
+    "url": "{{ config('app.url') }}/contact",
+    "breadcrumb": {
+        "@@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home",    "item": "{{ config('app.url') }}" },
+            { "@@type": "ListItem", "position": 2, "name": "Contact", "item": "{{ config('app.url') }}/contact" }
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "FAQPage",
+    "mainEntity": [
+        { "@@type": "Question", "name": "How long does a project take?",              "acceptedAnswer": { "@@type": "Answer", "text": "A landing page takes 3-5 days, a corporate website 7-14 days, and a custom system 2-8 weeks." } },
+        { "@@type": "Question", "name": "Do you work with small businesses?",         "acceptedAnswer": { "@@type": "Answer", "text": "Yes. We work with businesses of all sizes with flexible packages to fit different budgets." } },
+        { "@@type": "Question", "name": "Do you offer support after launch?",         "acceptedAnswer": { "@@type": "Answer", "text": "Yes. We offer post-launch support for all web and system projects." } },
+        { "@@type": "Question", "name": "How does payment work?",                     "acceptedAnswer": { "@@type": "Answer", "text": "50% deposit upfront and 50% upon delivery. Milestone payments available for larger projects." } },
+        { "@@type": "Question", "name": "What is the price for a landing page?",      "acceptedAnswer": { "@@type": "Answer", "text": "Landing pages start from RM1,500, corporate websites from RM3,000, and e-commerce from RM5,000." } }
+    ]
+}
+</script>
+@endpush
 
 
 @push('scripts')

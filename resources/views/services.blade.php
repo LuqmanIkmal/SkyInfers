@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Services — SkyInfers')
+@section('title',       'Services — Web Design & System Development | SkyInfers Johor Bahru')
+@section('description',  'SkyInfers offers professional web design and custom system development in Malaysia. Landing pages from RM1,500, corporate websites from RM3,000, e-commerce from RM5,000.')
+@section('keywords',     'web design services malaysia, system development services, landing page johor bahru, corporate website malaysia, e-commerce website johor bahru, laravel development, api development malaysia')
+@section('canonical',    url('/services'))
+@section('og_title',     'Services — Web Design & System Development | SkyInfers')
+@section('og_description','Professional web design and system development services in Malaysia. Landing pages, corporate websites, e-commerce and custom systems.')
 
 @section('content')
 
@@ -249,6 +254,55 @@
 </section>
 
 @endsection
+@push('jsonld')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "ItemList",
+    "name": "SkyInfers Services",
+    "url": "{{ config('app.url') }}/services",
+    "itemListElement": [
+        {
+            "@@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@@type": "Service",
+                "name": "Web Design & Development",
+                "description": "Landing pages, corporate websites and e-commerce stores built for conversion.",
+                "provider": { "@@type": "Organization", "name": "SkyInfers" },
+                "areaServed": "Malaysia",
+                "offers": [
+                    { "@@type": "Offer", "name": "Landing Page", "price": "1500", "priceCurrency": "MYR" },
+                    { "@@type": "Offer", "name": "Corporate Website", "price": "3000", "priceCurrency": "MYR" },
+                    { "@@type": "Offer", "name": "E-Commerce Website", "price": "5000", "priceCurrency": "MYR" }
+                ]
+            }
+        },
+        {
+            "@@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@@type": "Service",
+                "name": "System Development",
+                "description": "Custom business systems, CRM, APIs and web applications built with Laravel.",
+                "provider": { "@@type": "Organization", "name": "SkyInfers" },
+                "areaServed": "Malaysia"
+            }
+        }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@@type": "ListItem", "position": 1, "name": "Home",     "item": "{{ config('app.url') }}" },
+        { "@@type": "ListItem", "position": 2, "name": "Services", "item": "{{ config('app.url') }}/services" }
+    ]
+}
+</script>
+@endpush
 
 
 @push('scripts')

@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'SkyInfers — Web & System Development Agency')
+@section('title',       'SkyInfers — Web & System Development Agency | Johor Bahru, Malaysia')
+@section('description',  'SkyInfers builds stunning websites and custom systems for businesses in Malaysia. Landing pages, corporate websites, e-commerce stores and business management systems. Based in Johor Bahru.')
+@section('keywords',     'web dedevelopment johor bahru, system development johor bahru, landing page malaysia, corporate website johor bahru, e-commerce website malaysia, laravel developer johor bahru, skyinfers')
+@section('canonical',    url('/'))
+@section('og_title',     'SkyInfers — Web & System Development | Johor Bahru')
+@section('og_description','We build stunning websites and powerful custom systems that help businesses grow, scale, and stand out in the digital world. Based in Johor Bahru, Malaysia.')
 
 @section('content')
 
@@ -366,6 +371,29 @@
 </section>
 
 @endsection
+@push('jsonld')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "WebSite",
+    "name": "SkyInfers",
+    "url": "{{ config('app.url') }}",
+    "description": "Web design and system development agency in Johor Bahru, Malaysia."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "WebPage",
+    "name": "SkyInfers — Web Design & System Development Agency",
+    "url": "{{ config('app.url') }}",
+    "breadcrumb": {
+        "@@type": "BreadcrumbList",
+        "itemListElement": [{ "@@type": "ListItem", "position": 1, "name": "Home", "item": "{{ config('app.url') }}" }]
+    }
+}
+</script>
+@endpush
 
 
 @push('scripts')

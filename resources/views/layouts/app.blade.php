@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'SkyInfers - Web & System Solutions')</title>
-    <meta name="description" content="@yield('description', 'SkyInfers crafts high-performance web experiences.')">
+
+    {{-- Primary SEO --}}
+    <title>@yield('title', 'SkyInfers — Web Design & System Development | Johor Bahru, Malaysia')</title>
+    <meta name="description" content="@yield('description', 'SkyInfers is a web design and system development agency in Johor Bahru, Malaysia. We build stunning websites and custom systems that help businesses grow online.')">
+    <meta name="keywords"    content="@yield('keywords', 'web design johor bahru, system development malaysia, laravel developer malaysia, corporate website johor bahru, e-commerce website malaysia, skyinfers')">
+    <meta name="author"      content="SkyInfers">
+    <meta name="robots"      content="index, follow">
+    <link rel="canonical"    href="@yield('canonical', url()->current())">
+
+    {{-- Open Graph --}}
+    <meta property="og:type"        content="website">
+    <meta property="og:site_name"   content="SkyInfers">
+    <meta property="og:title"       content="@yield('og_title', 'SkyInfers — Web Design & System Development | Johor Bahru')">
+    <meta property="og:description" content="@yield('og_description', 'Web design and system development agency in Johor Bahru. We build websites and custom systems that grow your business.')">
+    <meta property="og:url"         content="@yield('canonical', url()->current())">
+    <meta property="og:image"       content="@yield('og_image', asset('images/og-image.jpg'))">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale"      content="en_MY">
+
+    {{-- Twitter Card --}}
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="@yield('og_title', 'SkyInfers — Web Design & System Development | Johor Bahru')">
+    <meta name="twitter:description" content="@yield('og_description', 'Web design and system development agency in Johor Bahru, Malaysia.')">
+    <meta name="twitter:image"       content="@yield('og_image', asset('images/og-image.jpg'))">
+
+    {{-- Page-specific JSON-LD --}}
+    @stack('jsonld')
+
+    {{-- Sitewide JSON-LD --}}
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "ProfessionalService",
+        "name": "SkyInfers",
+        "alternateName": "Sky Infers Enterprise",
+        "description": "Web design and system development agency in Johor Bahru, Malaysia.",
+        "url": "{{ config('app.url') }}",
+        "logo": "{{ asset('images/logoWhite.png') }}",
+        "telephone": "+60117-023-7694",
+        "email": "info@skyinfers.com",
+        "address": {
+            "@@type": "PostalAddress",
+            "addressLocality": "Johor Bahru",
+            "addressRegion": "Johor",
+            "addressCountry": "MY"
+        },
+        "areaServed": { "@@type": "Country", "name": "Malaysia" },
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "sameAs": [
+            "https://www.instagram.com/skyinfers",
+            "https://www.facebook.com/people/Sky-Infers/61577502219825/",
+            "https://www.tiktok.com/@skyinfers.web.sys"
+        ],
+        "hasOfferCatalog": {
+            "@@type": "OfferCatalog",
+            "name": "Web & System Development Services",
+            "itemListElement": [
+                { "@@type": "Offer", "itemOffered": { "@@type": "Service", "name": "Web Design & Development" } },
+                { "@@type": "Offer", "itemOffered": { "@@type": "Service", "name": "System Development" } }
+            ]
+        }
+    }
+    </script>
+
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>

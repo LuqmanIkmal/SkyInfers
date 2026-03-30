@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Projects — SkyInfers')
+@section('title',       'Projects & Portfolio — Web Design & System Development | SkyInfers')
+@section('description',  'Explore SkyInfers portfolio of web design and system development projects. Real work, real results for businesses across Malaysia. Corporate websites, e-commerce stores and custom systems.')
+@section('keywords',     'skyinfers portfolio, web design portfolio malaysia, system development portfolio, laravel projects malaysia, corporate website examples johor bahru')
+@section('canonical',    url('/projects'))
+@section('og_title',     'Projects & Portfolio | SkyInfers')
+@section('og_description','Real work, real results. Web design and system development projects by SkyInfers in Malaysia.')
 
 @section('content')
 
@@ -283,6 +288,24 @@
 </section>
 
 @endsection
+@push('jsonld')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "CollectionPage",
+    "name": "SkyInfers Projects & Portfolio",
+    "description": "Portfolio of web design and system development projects by SkyInfers.",
+    "url": "{{ config('app.url') }}/projects",
+    "breadcrumb": {
+        "@@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home",     "item": "{{ config('app.url') }}" },
+            { "@@type": "ListItem", "position": 2, "name": "Projects", "item": "{{ config('app.url') }}/projects" }
+        ]
+    }
+}
+</script>
+@endpush
 
 
 @push('scripts')

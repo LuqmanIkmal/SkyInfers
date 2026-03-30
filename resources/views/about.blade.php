@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'About — SkyInfers')
+@section('title',       'About SkyInfers — Web & System Development Agency in Johor Bahru')
+@section('description',  'Meet Luqman Ikmal, Technical Director of SkyInfers — a web design and system development agency in Johor Bahru, Malaysia. Built to give businesses access to quality digital work.')
+@section('keywords',     'about skyinfers, web agency johor bahru, luqman ikmal, technical director, web developer johor bahru, system developer malaysia')
+@section('canonical',    url('/about'))
+@section('og_title',     'About SkyInfers — Web & System Development Agency')
+@section('og_description','SkyInfers is a web design and system development agency in Johor Bahru. Built to give every business access to quality digital work.')
 
 @section('content')
 
@@ -239,6 +244,33 @@
 </section>
 
 @endsection
+@push('jsonld')
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "AboutPage",
+    "name": "About SkyInfers",
+    "url": "{{ config('app.url') }}/about",
+    "breadcrumb": {
+        "@@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@@type": "ListItem", "position": 1, "name": "Home",  "item": "{{ config('app.url') }}" },
+            { "@@type": "ListItem", "position": 2, "name": "About", "item": "{{ config('app.url') }}/about" }
+        ]
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "Person",
+    "name": "Luqman Ikmal",
+    "jobTitle": "Technical Director",
+    "worksFor": { "@@type": "Organization", "name": "SkyInfers" },
+    "knowsAbout": ["Laravel", "System Architecture", "API Development", "Web Performance", "Web Design"]
+}
+</script>
+@endpush
 
 
 @push('scripts')
