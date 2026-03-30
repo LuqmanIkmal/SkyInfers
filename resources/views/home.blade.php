@@ -504,21 +504,44 @@
     });
 
     // ── CTA FORM
-    function handleSubmit() {
-        const input = document.getElementById('emailInput');
-        const msg   = document.getElementById('form-msg');
+    async function handleSubmit() {
+        const input    = document.getElementById('emailInput');
+        const msg      = document.getElementById('form-msg');
+        const services = [...homeSelected].join(', ');
+
         if (homeSelected.size === 0) {
-            msg.style.display = 'block'; msg.style.color = '#f59e0b';
-            msg.textContent = 'Please select at least one service you\'re interested in'; return;
+            msg.style.display = 'block';
+            msg.style.color   = '#f59e0b';
+            msg.textContent   = 'Please select at least one service';
+            return;
         }
         if (!input.value || !input.value.includes('@')) {
             input.style.borderColor = '#ef4444';
-            msg.style.display = 'block'; msg.style.color = '#ef4444';
-            msg.textContent = 'Please enter a valid email address'; return;
+            msg.style.display = 'block';
+            msg.style.color   = '#ef4444';
+            msg.textContent   = 'Please enter a valid email address';
+            return;
         }
-        input.style.borderColor = '#00d4aa';
-        msg.style.display = 'block'; msg.style.color = '#00d4aa';
-        msg.textContent = `✓ Got it! We'll reach out about: ${[...homeSelected].join(', ')}`;
+
+        const res = await fetch('/send-inquiry', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+            },
+            body: JSON.stringify({ email: input.value, services })
+        });
+
+        if (res.ok) {
+            input.style.borderColor = '#00d4aa';
+            msg.style.display = 'block';
+            msg.style.color   = '#00d4aa';
+            msg.textContent   = `✓ Got it! We'll reach out about: ${services}`;
+        } else {
+            msg.style.display = 'block';
+            msg.style.color   = '#ef4444';
+            msg.textContent   = 'Something went wrong. Please try again.';
+        }
     }
 </script>
 @endpush

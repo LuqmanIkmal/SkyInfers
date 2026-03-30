@@ -227,14 +227,41 @@
         });
     });
 
-    function submitContact() {
-        const name=document.getElementById('contactName'), email=document.getElementById('contactEmail'), msg=document.getElementById('contact-msg');
-        if(!name.value.trim()) { name.style.borderColor='#ef4444'; msg.style.display='block'; msg.style.color='#ef4444'; msg.textContent='Please enter your name.'; return; }
-        if(!email.value||!email.value.includes('@')) { email.style.borderColor='#ef4444'; msg.style.display='block'; msg.style.color='#ef4444'; msg.textContent='Please enter a valid email address.'; return; }
-        if(contactSelected.size===0) { msg.style.display='block'; msg.style.color='#f59e0b'; msg.textContent='Please select at least one service you\'re interested in.'; return; }
-        name.style.borderColor='#00d4aa'; email.style.borderColor='#00d4aa';
-        msg.style.display='block'; msg.style.color='#00d4aa';
-        msg.textContent=`✓ Message sent! We'll reach out about ${[...contactSelected].join(', ')} within 24 hours.`;
+    async function submitContact() {
+        const name    = document.getElementById('contactName');
+        const email   = document.getElementById('contactEmail');
+        const message = document.getElementById('contactMessage');
+        const msg     = document.getElementById('contact-msg');
+        const services = [...contactSelected].join(', ');
+
+        if (!name.value.trim()) { name.style.borderColor='#ef4444'; msg.style.display='block'; msg.style.color='#ef4444'; msg.textContent='Please enter your name.'; return; }
+        if (!email.value || !email.value.includes('@')) { email.style.borderColor='#ef4444'; msg.style.display='block'; msg.style.color='#ef4444'; msg.textContent='Please enter a valid email.'; return; }
+        if (contactSelected.size === 0) { msg.style.display='block'; msg.style.color='#f59e0b'; msg.textContent='Please select at least one service.'; return; }
+
+        const res = await fetch('/send-inquiry', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+            },
+            body: JSON.stringify({
+                email: email.value,
+                name: name.value,
+                services,
+                message: message.value
+            })
+        });
+
+        if (res.ok) {
+            email.style.borderColor = '#00d4aa';
+            msg.style.display = 'block';
+            msg.style.color   = '#00d4aa';
+            msg.textContent   = `✓ Message sent! We'll reach out within 24 hours.`;
+        } else {
+            msg.style.display = 'block';
+            msg.style.color   = '#ef4444';
+            msg.textContent   = 'Something went wrong. Please try again.';
+        }
     }
 
     function toggleFaq(el) {
