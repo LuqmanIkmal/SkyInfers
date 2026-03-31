@@ -192,9 +192,9 @@
                 ]],
                 ['Connect', [
                     ['Instagram', 'https://www.instagram.com/skyinfers'],
-                    ['Facebook',  'https://www.facebook.com/people/Sky-Infers/61577502219825/'],
+                    ['Facebook',  'https://www.facebook.com/people/SkyInfers-Web-System-Solution/61575360628065/'],
                     ['TikTok',    'https://www.tiktok.com/@skyinfers.web.sys?_r=1&_t=ZS-956IKx9o6YX'],
-                    ['WhatsApp',  'https://wa.me/601170237694'],
+                    ['WhatsApp',  'https://wa.me/601139528542'],
                 ]],
             ];
             @endphp

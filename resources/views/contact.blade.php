@@ -53,8 +53,8 @@
             <div class="flex flex-col gap-3 sm:gap-4 mb-8 sm:mb-10">
                 @php
                 $contacts = [
-                    ['icon' => '📧', 'label' => 'Email',    'value' => 'info@skyinfers.com',   'href' => 'mailto:info@skyinfers.com'],
-                    ['icon' => '💬', 'label' => 'WhatsApp', 'value' => '+60 11-7023 7694',        'href' => 'https://wa.me/601170237694'],
+                    ['icon' => '📧', 'label' => 'Email',    'value' => 'team@skyinfers.com',   'href' => 'mailto:team@skyinfers.com'],
+                    ['icon' => '💬', 'label' => 'WhatsApp', 'value' => '+60 11-3952 8542',        'href' => 'https://wa.me/601139528542'],
                     ['icon' => '📍', 'label' => 'Location', 'value' => 'Johor Bahru, Malaysia', 'href' => null],
                 ];
                 @endphp
@@ -81,8 +81,8 @@
                     $socials = [
                         ['label' => 'Instagram', 'href' => 'https://www.instagram.com/skyinfers', 'target' => '_blank'],
                         ['label' => 'TikTok',    'href' => 'https://www.tiktok.com/@skyinfers.web.sys?_r=1&_t=ZS-956IKx9o6YX'],
-                        ['label' => 'Facebook',  'href' => 'https://www.facebook.com/people/Sky-Infers/61577502219825/'],
-                        ['label' => 'WhatsApp',  'href' => 'https://wa.me/601170237696'],
+                        ['label' => 'Facebook',  'href' => 'https://www.facebook.com/people/SkyInfers-Web-System-Solution/61575360628065/'],
+                        ['label' => 'WhatsApp',  'href' => 'https://wa.me/601139528542'],
                     ];
                     @endphp
                     @foreach($socials as $s)
