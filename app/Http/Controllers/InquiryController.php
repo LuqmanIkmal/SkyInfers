@@ -24,7 +24,7 @@ class InquiryController extends Controller
         Mail::raw(
             "New inquiry from: {$email}\nName: {$name}\nInterested in: {$services}\nMessage: {$message}",
             function($msg) use ($email, $services) {
-                $msg->to('info@skyinfers.com')
+                $msg->to('skyinfers@gmail.com')
                     ->subject("New Inquiry: {$services}");
             }
         );
