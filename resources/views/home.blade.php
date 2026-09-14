@@ -114,14 +114,18 @@
     @php
     $services = [
         [
-            'num'   => '01', 'icon' => '🌐', 'title' => 'Web Development',
+            'num'   => '01',
+            'icon'  => '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.5 3.75 5.5 3.75 9s-1.25 6.5-3.75 9c-2.5-2.5-3.75-5.5-3.75-9S9.5 5.5 12 3z"/></svg>',
+            'title' => 'Web Development',
             'desc'  => 'Beautiful, conversion-focused websites tailored to your goals. Whether it\'s a landing page, corporate site, or full e-commerce store, we design and build it right.',
             'tags'  => ['Landing Page', 'Corporate Website', 'E-Commerce'],
             'items' => ['Mobile Responsive', 'SEO Optimized', 'CMS Included', 'Free Domain & Hosting'],
             'color' => '0,212,170', 'href' => '/services#web-design',
         ],
         [
-            'num'   => '02', 'icon' => '⚙️', 'title' => 'System Development',
+            'num'   => '02',
+            'icon'  => '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V19a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H4a2 2 0 110-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H10a1.65 1.65 0 001-1.51V4a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V10a1.65 1.65 0 001.51 1H20a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>',
+            'title' => 'System Development',
             'desc'  => 'Custom-built systems that streamline your operations and scale with your business. From internal tools to complex platforms, we engineer solutions that work.',
             'tags'  => ['Custom Systems', 'Web Apps', 'API Integration'],
             'items' => ['Laravel & React', 'REST APIs', 'Business Automation', 'Scalable Architecture'],
@@ -150,8 +154,8 @@
                 {{-- Number + Icon --}}
                 <div class="flex flex-row md:flex-col items-center md:justify-center gap-4 px-5 sm:px-8 md:px-10 py-6 md:py-10 md:border-r border-b md:border-b-0 border-white/[0.07] md:min-w-[120px]">
                     <div class="font-syne text-2xl md:text-[2.5rem] font-extrabold leading-none tracking-tight text-white/[0.06] group-hover:text-white/[0.12] transition-all duration-500">{{ $s['num'] }}</div>
-                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center text-xl md:text-2xl transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1 flex-shrink-0"
-                         style="background: rgba({{ $s['color'] }}, 0.1);">{{ $s['icon'] }}</div>
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1 flex-shrink-0"
+                         style="background: rgba({{ $s['color'] }}, 0.1); color: rgb({{ $s['color'] }});">{!! $s['icon'] !!}</div>
                 </div>
 
                 {{-- Content --}}
@@ -334,17 +338,20 @@
 
         {{-- Service Selector --}}
         <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10">
-            @foreach([
-                ['🚀', 'Landing Page'],
-                ['🏢', 'Corporate Website'],
-                ['🛒', 'E-Commerce'],
-                ['⚙️', 'System Development'],
-            ] as [$icon, $label])
+            @php
+            $ctaOptions = [
+                ['<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M7 13h10M7 16h6"/></svg>', 'Landing Page'],
+                ['<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4a1 1 0 011-1h6a1 1 0 011 1v17"/><path d="M14 21v-8h4a1 1 0 011 1v7"/><path d="M3 21h18"/><path d="M9 7h.01M9 10h.01M9 13h.01M9 16h.01"/></svg>', 'Corporate Website'],
+                ['<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>', 'E-Commerce'],
+                ['<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V19a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H4a2 2 0 110-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H10a1.65 1.65 0 001-1.51V4a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V10a1.65 1.65 0 001.51 1H20a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>', 'System Development'],
+            ];
+            @endphp
+            @foreach($ctaOptions as [$icon, $label])
             <button
                 type="button"
                 class="home-pill flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border text-xs sm:text-sm font-medium transition-all duration-200"
                 style="border-color:rgba(255,255,255,0.07); color:#6b7280; background:#131720;">
-                <span>{{ $icon }}</span>
+                <span class="inline-flex items-center">{!! $icon !!}</span>
                 <span>{{ $label }}</span>
             </button>
             @endforeach
