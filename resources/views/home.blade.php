@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title',       'SkyInfers — Web & System Development Agency | Johor Bahru, Malaysia')
+@section('title',       'SkyInfers - Web & System Development Agency | Johor Bahru, Malaysia')
 @section('description',  'SkyInfers builds stunning websites and custom systems for businesses in Malaysia. Landing pages, corporate websites, e-commerce stores and business management systems. Based in Johor Bahru.')
 @section('keywords',     'web dedevelopment johor bahru, system development johor bahru, landing page malaysia, corporate website johor bahru, e-commerce website malaysia, laravel developer johor bahru, skyinfers')
 @section('canonical',    url('/'))

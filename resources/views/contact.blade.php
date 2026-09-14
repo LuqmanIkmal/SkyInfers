@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title',       'Contact SkyInfers — Free Consultation | Web Design & System Development Johor Bahru')
+@section('title',       'Contact SkyInfers - Free Consultation | Web Design & System Development Johor Bahru')
 @section('description',  'Contact SkyInfers for web design or system development. Based in Johor Bahru, Malaysia. Free consultation, reply within 24 hours. WhatsApp: +60117-023-7694')
 @section('keywords',     'contact skyinfers, web design consultation johor bahru, hire web developer malaysia, system development inquiry, free consultation web design malaysia')
 @section('canonical',    url('/contact'))

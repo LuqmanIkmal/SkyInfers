@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title',       'Services — Web Design & System Development | SkyInfers Johor Bahru')
+@section('title',       'Services - Web Design & System Development | SkyInfers Johor Bahru')
 @section('description',  'SkyInfers offers professional web design and custom system development in Malaysia. Landing pages from RM1,500, corporate websites from RM3,000, e-commerce from RM5,000.')
 @section('keywords',     'web design services malaysia, system development services, landing page johor bahru, corporate website malaysia, e-commerce website johor bahru, laravel development, api development malaysia')
 @section('canonical',    url('/services'))

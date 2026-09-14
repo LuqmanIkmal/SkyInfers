@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title',       'About SkyInfers — Web & System Development Agency in Johor Bahru')
+@section('title',       'About SkyInfers - Web & System Development Agency in Johor Bahru')
 @section('description',  'Meet Luqman Ikmal, Technical Director of SkyInfers — a web design and system development agency in Johor Bahru, Malaysia. Built to give businesses access to quality digital work.')
 @section('keywords',     'about skyinfers, web agency johor bahru, luqman ikmal, technical director, web developer johor bahru, system developer malaysia')
 @section('canonical',    url('/about'))

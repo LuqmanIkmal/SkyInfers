@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title',       'Projects & Portfolio — Web Design & System Development | SkyInfers')
+@section('title',       'Projects & Portfolio - Web Design & System Development | SkyInfers')
 @section('description',  'Explore SkyInfers portfolio of web design and system development projects. Real work, real results for businesses across Malaysia. Corporate websites, e-commerce stores and custom systems.')
 @section('keywords',     'skyinfers portfolio, web design portfolio malaysia, system development portfolio, laravel projects malaysia, corporate website examples johor bahru')
 @section('canonical',    url('/projects'))
