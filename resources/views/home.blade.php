@@ -4,7 +4,7 @@
 @section('description',  'SkyInfers builds stunning websites and custom systems for businesses in Malaysia. Landing pages, corporate websites, e-commerce stores and business management systems. Based in Johor Bahru.')
 @section('keywords',     'web dedevelopment johor bahru, system development johor bahru, landing page malaysia, corporate website johor bahru, e-commerce website malaysia, laravel developer johor bahru, skyinfers')
 @section('canonical',    url('/'))
-@section('og_title',     'SkyInfers — Web & System Development | Johor Bahru')
+@section('og_title',     'SkyInfers - Web & System Development | Johor Bahru')
 @section('og_description','We build stunning websites and powerful custom systems that help businesses grow, scale, and stand out in the digital world. Based in Johor Bahru, Malaysia.')
 
 @section('content')
