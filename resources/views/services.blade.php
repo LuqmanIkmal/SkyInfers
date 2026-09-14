@@ -40,7 +40,7 @@
         [
             'id'      => 'web-development',
             'num'     => '01',
-            'icon'    => '🌐',
+            'icon'    => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.5 3.75 5.5 3.75 9s-1.25 6.5-3.75 9c-2.5-2.5-3.75-5.5-3.75-9S9.5 5.5 12 3z"/></svg>',
             'title'   => 'Web Development',
             'sub'     => 'Websites that convert visitors into customers',
             'color'   => '#00d4aa',
@@ -48,16 +48,16 @@
             'desc'    => 'Beautiful, conversion-focused websites tailored to your goals. Whether it\'s a landing page, corporate site, or full e-commerce store, we design and build it right. Every site is mobile responsive, SEO-optimized, and built to perform.',
             'tags'    => ['Landing Page', 'Corporate Website', 'E-Commerce'],
             'subservices' => [
-                ['icon' => '🚀', 'title' => 'Landing Page',      'desc' => 'High-converting single pages designed with one goal, turning visitors into leads or customers.', 'items' => ['Lead Generation', 'Product Launch', 'Campaign Pages', 'A/B Tested Layouts']],
-                ['icon' => '🏢', 'title' => 'Corporate Website', 'desc' => 'Professional multi-page websites that build credibility and showcase your business.',              'items' => ['Multi-page Structure', 'About & Team Pages', 'Services Showcase', 'Contact & Forms']],
-                ['icon' => '🛒', 'title' => 'E-Commerce',        'desc' => 'Revenue-generating online stores built to convert, from product discovery to checkout.',           'items' => ['Product Catalogue', 'Secure Checkout', 'Payment Integration', 'Inventory Management']],
+                ['icon' => '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M7 13h10M7 16h6"/></svg>', 'title' => 'Landing Page',      'desc' => 'High-converting single pages designed with one goal, turning visitors into leads or customers.', 'items' => ['Lead Generation', 'Product Launch', 'Campaign Pages', 'A/B Tested Layouts']],
+                ['icon' => '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4a1 1 0 011-1h6a1 1 0 011 1v17"/><path d="M14 21v-8h4a1 1 0 011 1v7"/><path d="M3 21h18"/><path d="M9 7h.01M9 10h.01M9 13h.01M9 16h.01"/></svg>', 'title' => 'Corporate Website', 'desc' => 'Professional multi-page websites that build credibility and showcase your business.',              'items' => ['Multi-page Structure', 'About & Team Pages', 'Services Showcase', 'Contact & Forms']],
+                ['icon' => '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>', 'title' => 'E-Commerce',        'desc' => 'Revenue-generating online stores built to convert, from product discovery to checkout.',           'items' => ['Product Catalogue', 'Secure Checkout', 'Payment Integration', 'Inventory Management']],
             ],
             'includes' => ['Custom design for your brand', 'Mobile-responsive on all devices', 'SEO optimized', 'CMS so you can update content', 'Free 1 year domain & hosting'],
         ],
         [
             'id'      => 'system-development',
             'num'     => '02',
-            'icon'    => '⚙️',
+            'icon'    => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><path d="M12 2.5v3M12 18.5v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2.5 12h3M18.5 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>',
             'title'   => 'System Development',
             'sub'     => 'Custom systems that power your business',
             'color'   => '#4f8eff',
@@ -65,9 +65,9 @@
             'desc'    => 'Off-the-shelf software rarely fits perfectly. We build custom systems from the ground up, tailored exactly to how your business operates. Whether you need to automate processes, manage data, or connect multiple tools, we engineer it to work seamlessly.',
             'tags'    => ['Custom Systems', 'Web Apps', 'API Integration'],
             'subservices' => [
-                ['icon' => '📊', 'title' => 'Business Management Systems', 'desc' => 'CRM, inventory, HR tools, dashboards — custom-built to match your exact workflow.',  'items' => ['CRM Systems', 'Inventory Management', 'HR Tools', 'Custom Dashboards']],
-                ['icon' => '🔗', 'title' => 'API & Integrations',          'desc' => 'Connect your apps, automate data flows, and eliminate manual work.',                   'items' => ['REST API Development', 'Third-party Integrations', 'Data Pipelines', 'Webhook Systems']],
-                ['icon' => '⚡', 'title' => 'Automation & Web Apps',       'desc' => 'Full-featured web apps and automated workflows that run 24/7.',                         'items' => ['Web Applications', 'Role-based Access', 'Workflow Automation', 'Real-time Features']],
+                ['icon' => '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>', 'title' => 'Business Management Systems', 'desc' => 'CRM, inventory, HR tools, dashboards — custom-built to match your exact workflow.',  'items' => ['CRM Systems', 'Inventory Management', 'HR Tools', 'Custom Dashboards']],
+                ['icon' => '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6"/><path d="M10 6l.7-.7a4 4 0 015.66 5.66L15.7 11.6"/><path d="M14 18l-.7.7a4 4 0 01-5.66-5.66L8.3 12.4"/></svg>', 'title' => 'API & Integrations',          'desc' => 'Connect your apps, automate data flows, and eliminate manual work.',                   'items' => ['REST API Development', 'Third-party Integrations', 'Data Pipelines', 'Webhook Systems']],
+                ['icon' => '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>', 'title' => 'Automation & Web Apps',       'desc' => 'Full-featured web apps and automated workflows that run 24/7.',                         'items' => ['Web Applications', 'Role-based Access', 'Workflow Automation', 'Real-time Features']],
             ],
             'includes' => ['Laravel & React stack', 'Scalable architecture', 'Security-first approach', 'Full documentation', 'Post-launch support'],
         ],
@@ -87,7 +87,7 @@
             data-index="{{ $i }}">
 
             <div class="svc-nav-progress absolute bottom-0 left-0 h-[2px] w-0 transition-all duration-300" style="background: {{ $s['color'] }};"></div>
-            <div class="svc-nav-icon w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-base sm:text-lg flex-shrink-0 transition-all duration-300" style="background: rgba(255,255,255,0.04);">{{ $s['icon'] }}</div>
+            <div class="svc-nav-icon w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300" style="background: rgba(255,255,255,0.04); color: {{ $s['color'] }};">{!! $s['icon'] !!}</div>
             <div>
                 <div class="svc-nav-num text-xs font-bold tracking-widest mb-0.5 transition-colors duration-300" style="color:rgba(255,255,255,0.2);">{{ $s['num'] }}</div>
                 <div class="svc-nav-title font-syne font-bold text-xs sm:text-sm tracking-tight transition-colors duration-300 whitespace-nowrap" style="color:#6b7280;">{{ $s['title'] }}</div>
@@ -112,8 +112,8 @@
                     <div class="relative">
                         {{-- Header --}}
                         <div class="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-7 sm:mb-10">
-                            <div class="w-13 h-13 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center text-2xl sm:text-3xl flex-shrink-0"
-                                 style="background: {{ $s['color'] }}1a;">{{ $s['icon'] }}</div>
+                            <div class="w-13 h-13 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center flex-shrink-0"
+                                 style="background: {{ $s['color'] }}1a; color: {{ $s['color'] }};">{!! $s['icon'] !!}</div>
                             <div>
                                 <div class="text-xs font-bold tracking-widest uppercase mb-1 sm:mb-2" style="color:{{ $s['color'] }};">{{ $s['num'] }} — {{ $s['title'] }}</div>
                                 <h2 class="font-syne font-extrabold leading-tight tracking-tight" style="font-size:clamp(1.4rem,3vw,2.4rem);">{{ $s['sub'] }}</h2>
@@ -128,8 +128,8 @@
                             <div class="bg-bg border border-white/[0.07] rounded-2xl p-5 sm:p-8 hover:-translate-y-0.5 transition-all duration-300"
                                  onmouseover="this.style.borderColor='{{ $s['color'] }}33'"
                                  onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'">
-                                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center text-lg sm:text-xl mb-4 sm:mb-5 transition-all duration-300"
-                                     style="background: {{ $s['color'] }}15;">{{ $ss['icon'] }}</div>
+                                <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center mb-4 sm:mb-5 transition-all duration-300"
+                                     style="background: {{ $s['color'] }}15; color: {{ $s['color'] }};">{!! $ss['icon'] !!}</div>
                                 <h3 class="font-syne font-bold text-sm sm:text-base tracking-tight mb-2 sm:mb-3">{{ $ss['title'] }}</h3>
                                 <p class="text-muted text-xs leading-relaxed mb-4 sm:mb-5">{{ $ss['desc'] }}</p>
                                 <div class="flex flex-wrap gap-1.5">
@@ -193,10 +193,10 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
         @php
         $reasons = [
-            ['icon' => '🎯', 'title' => 'Results-Focused',    'desc' => 'Every decision we make is tied to a business outcome. We don\'t do pretty for pretty\'s sake.'],
-            ['icon' => '⚡', 'title' => 'Fast Turnaround',     'desc' => 'We work efficiently without cutting corners. Most projects are delivered faster than industry standard.'],
-            ['icon' => '🔄', 'title' => 'Full Integration',    'desc' => 'Web and systems, all under one roof. Everything works together because one team built it all.'],
-            ['icon' => '🤝', 'title' => 'Transparent Process', 'desc' => 'You\'ll always know where your project stands. Clear communication, regular updates, no surprises.'],
+            ['icon' => '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>', 'title' => 'Results-Focused',    'desc' => 'Every decision we make is tied to a business outcome. We don\'t do pretty for pretty\'s sake.'],
+            ['icon' => '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>', 'title' => 'Fast Turnaround',     'desc' => 'We work efficiently without cutting corners. Most projects are delivered faster than industry standard.'],
+            ['icon' => '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 01-15.5 6.3L3 16"/><path d="M3 12a9 9 0 0115.5-6.3L21 8"/><path d="M3 16v4h4"/><path d="M21 8V4h-4"/></svg>', 'title' => 'Full Integration',    'desc' => 'Web and systems, all under one roof. Everything works together because one team built it all.'],
+            ['icon' => '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16.5 3.13a4 4 0 010 7.75"/></svg>', 'title' => 'Transparent Process', 'desc' => 'You\'ll always know where your project stands. Clear communication, regular updates, no surprises.'],
         ];
         @endphp
         @foreach($reasons as $i => $r)
@@ -208,7 +208,7 @@
             {{ $i === 0 ? 'lg:rounded-l-2xl lg:rounded-tr-none' : '' }}
             {{ $i === 3 ? 'lg:rounded-r-2xl lg:rounded-bl-none' : '' }}
             p-6 sm:p-8 lg:p-10 hover:border-accent/25 hover:-translate-y-0.5 transition-all duration-300">
-            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-accent/10 rounded-xl flex items-center justify-center text-xl sm:text-2xl mb-5 sm:mb-6">{{ $r['icon'] }}</div>
+            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5 sm:mb-6" style="color:rgb(79,142,255);">{!! $r['icon'] !!}</div>
             <h3 class="font-syne font-bold text-base sm:text-lg tracking-tight mb-2 sm:mb-3">{{ $r['title'] }}</h3>
             <p class="text-muted text-xs sm:text-sm leading-relaxed">{{ $r['desc'] }}</p>
         </div>
@@ -232,10 +232,19 @@
         </p>
 
         <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10">
-            @foreach([['🚀','Landing Page'],['🏢','Corporate Website'],['🛒','E-Commerce'],['⚙️','System Development']] as [$icon, $label])
+            @php
+            $ctaOptions = [
+                ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M7 13h10M7 16h6"/></svg>', 'Landing Page', '0,212,170'],
+                ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4a1 1 0 011-1h6a1 1 0 011 1v17"/><path d="M14 21v-8h4a1 1 0 011 1v7"/><path d="M3 21h18"/><path d="M9 7h.01M9 10h.01M9 13h.01M9 16h.01"/></svg>', 'Corporate Website', '0,212,170'],
+                ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>', 'E-Commerce', '0,212,170'],
+                ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><path d="M12 2.5v3M12 18.5v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2.5 12h3M18.5 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>', 'System Development', '79,142,255'],
+            ];
+            @endphp
+            @foreach($ctaOptions as [$icon, $label, $color])
             <button type="button" class="service-pill flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border text-xs sm:text-sm font-medium transition-all duration-200"
                 style="border-color:rgba(255,255,255,0.07); color:#6b7280; background:#131720;">
-                <span>{{ $icon }}</span><span>{{ $label }}</span>
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full flex-shrink-0" style="background: rgba({{ $color }},0.15); color: rgb({{ $color }});">{!! $icon !!}</span>
+                <span>{{ $label }}</span>
             </button>
             @endforeach
         </div>

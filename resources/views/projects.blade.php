@@ -132,7 +132,7 @@
                             <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full" style="background:#febc2e;"></span>
                             <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full" style="background:#28c840;"></span>
                             <div class="flex-1 mx-2 sm:mx-4 bg-white/[0.06] rounded-full px-3 sm:px-4 py-1 sm:py-1.5 flex items-center gap-2 overflow-hidden">
-                                <span class="text-white/20 text-xs">🔒</span>
+                                <span class="text-white/20 flex items-center"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 018 0v3.5"/></svg></span>
                                 <span class="text-white/30 text-xs font-mono truncate hidden sm:block">skyinfers.com/{{ strtolower(str_replace(' ', '-', $p['title'])) }}</span>
                             </div>
                         </div>
@@ -226,7 +226,7 @@
     </div>
 
     <div id="emptyState" style="display:none;" class="text-center py-20 sm:py-24">
-        <div class="text-4xl mb-4">🔍</div>
+        <div class="flex justify-center mb-4" style="color:#6b7280;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
         <p class="text-muted text-base">No projects found in this category yet.</p>
     </div>
 </section>
@@ -266,10 +266,19 @@
         </p>
 
         <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10">
-            @foreach([['🚀','Landing Page'],['🏢','Corporate Website'],['🛒','E-Commerce'],['⚙️','System Development']] as [$icon, $label])
+            @php
+            $ctaOptions = [
+                ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M7 13h10M7 16h6"/></svg>', 'Landing Page', '0,212,170'],
+                ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4a1 1 0 011-1h6a1 1 0 011 1v17"/><path d="M14 21v-8h4a1 1 0 011 1v7"/><path d="M3 21h18"/><path d="M9 7h.01M9 10h.01M9 13h.01M9 16h.01"/></svg>', 'Corporate Website', '0,212,170'],
+                ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>', 'E-Commerce', '0,212,170'],
+                ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><path d="M12 2.5v3M12 18.5v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2.5 12h3M18.5 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>', 'System Development', '79,142,255'],
+            ];
+            @endphp
+            @foreach($ctaOptions as [$icon, $label, $color])
             <button type="button" class="projects-pill flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border text-xs sm:text-sm font-medium transition-all duration-200"
                 style="border-color:rgba(255,255,255,0.07); color:#6b7280; background:#131720;">
-                <span>{{ $icon }}</span><span>{{ $label }}</span>
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full flex-shrink-0" style="background: rgba({{ $color }},0.15); color: rgb({{ $color }});">{!! $icon !!}</span>
+                <span>{{ $label }}</span>
             </button>
             @endforeach
         </div>

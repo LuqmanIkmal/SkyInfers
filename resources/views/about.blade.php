@@ -96,7 +96,9 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-0.5">
         <div class="reveal bg-surface border border-white/[0.07] rounded-t-2xl sm:rounded-t-none sm:rounded-l-2xl p-7 sm:p-10 lg:p-12 hover:border-accent/25 transition-all duration-300">
-            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-2xl sm:text-3xl mb-6 sm:mb-8">🎯</div>
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 sm:mb-8" style="color:rgb(79,142,255);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+            </div>
             <div class="text-accent text-xs font-bold tracking-widest uppercase mb-3 sm:mb-4">Our Mission</div>
             <h3 class="font-syne font-extrabold text-xl sm:text-2xl tracking-tight mb-4 sm:mb-5">To make exceptional digital work accessible</h3>
             <p class="text-muted text-sm sm:text-base leading-relaxed">
@@ -104,7 +106,9 @@
             </p>
         </div>
         <div class="reveal bg-surface border border-white/[0.07] rounded-b-2xl sm:rounded-b-none sm:rounded-r-2xl p-7 sm:p-10 lg:p-12 hover:border-accent/25 transition-all duration-300">
-            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-accent-2/10 rounded-2xl flex items-center justify-center text-2xl sm:text-3xl mb-6 sm:mb-8">🚀</div>
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-accent-2/10 rounded-2xl flex items-center justify-center mb-6 sm:mb-8" style="color:rgb(0,212,170);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 2 4.5 5.5 4.5 9 0 2-.7 3.8-1.7 5.2L12 19l-2.8-2.8C8.2 14.8 7.5 13 7.5 11c0-3.5 1.5-7 4.5-9z"/><circle cx="12" cy="10" r="1.8"/><path d="M9 16.5c-1 .5-1.8 1.5-2 3.5 2-.2 3-1 3.5-2"/><path d="M15 16.5c1 .5 1.8 1.5 2 3.5-2-.2-3-1-3.5-2"/></svg>
+            </div>
             <div class="text-accent-2 text-xs font-bold tracking-widest uppercase mb-3 sm:mb-4">Our Vision</div>
             <h3 class="font-syne font-extrabold text-xl sm:text-2xl tracking-tight mb-4 sm:mb-5">To be the go-to digital partner in Southeast Asia</h3>
             <p class="text-muted text-sm sm:text-base leading-relaxed">
@@ -129,12 +133,12 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0.5">
         @php
         $values = [
-            ['icon' => '💡', 'title' => 'Clarity Over Complexity',      'desc' => 'We believe the best solutions are the simplest ones. We cut through noise to deliver work that\'s clear, purposeful, and easy to understand for you and your audience.'],
-            ['icon' => '🔥', 'title' => 'Quality Without Compromise',   'desc' => 'We hold every deliverable to a high standard. Whether it\'s a landing page or a full custom system, we don\'t ship anything we\'re not proud of.'],
-            ['icon' => '🤝', 'title' => 'Partnership, Not Transactions','desc' => 'We treat every client relationship as a long-term partnership. Your success is our success, and we act like it in every interaction, every revision, every follow-up.'],
-            ['icon' => '⚡', 'title' => 'Speed with Intention',         'desc' => 'We move fast, but never carelessly. Every fast delivery is backed by a process designed to maintain quality while respecting your time and budget.'],
-            ['icon' => '📊', 'title' => 'Results Are the Metric',       'desc' => 'We measure success by what actually happens after we deliver. If it\'s not moving the needle, we keep working.'],
-            ['icon' => '🌱', 'title' => 'Always Growing',               'desc' => 'The digital world doesn\'t stand still, and neither do we. We\'re constantly learning, testing, and improving so our clients always get current, relevant work.'],
+            ['icon' => '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 00-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0012 2z"/></svg>', 'title' => 'Clarity Over Complexity',      'desc' => 'We believe the best solutions are the simplest ones. We cut through noise to deliver work that\'s clear, purposeful, and easy to understand for you and your audience.'],
+            ['icon' => '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3-1.5 4.5-3 7-1.5 2.5-1.5 6 0 8a6 6 0 0011-3.5c0-2.5-1.5-4-3-5.5.2 2-.6 3-1.5 3.5.5-3-.5-6.5-3.5-9.5z"/></svg>', 'title' => 'Quality Without Compromise',   'desc' => 'We hold every deliverable to a high standard. Whether it\'s a landing page or a full custom system, we don\'t ship anything we\'re not proud of.'],
+            ['icon' => '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16.5 3.13a4 4 0 010 7.75"/></svg>', 'title' => 'Partnership, Not Transactions','desc' => 'We treat every client relationship as a long-term partnership. Your success is our success, and we act like it in every interaction, every revision, every follow-up.'],
+            ['icon' => '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>', 'title' => 'Speed with Intention',         'desc' => 'We move fast, but never carelessly. Every fast delivery is backed by a process designed to maintain quality while respecting your time and budget.'],
+            ['icon' => '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>', 'title' => 'Results Are the Metric',       'desc' => 'We measure success by what actually happens after we deliver. If it\'s not moving the needle, we keep working.'],
+            ['icon' => '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V13"/><path d="M12 13C7 13 4 9.5 4 5c5 0 8 3 8 8z"/><path d="M12 13c5 0 8-3.5 8-8-5 0-8 3-8 8z"/></svg>', 'title' => 'Always Growing',               'desc' => 'The digital world doesn\'t stand still, and neither do we. We\'re constantly learning, testing, and improving so our clients always get current, relevant work.'],
         ];
         @endphp
         @foreach($values as $i => $v)
@@ -146,7 +150,7 @@
             {{ $i === 4 ? '' : '' }}
             {{ $i === 5 ? 'rounded-br-2xl' : '' }}
             p-6 sm:p-8 lg:p-10 hover:border-accent/25 hover:-translate-y-0.5 transition-all duration-300">
-            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-accent/10 rounded-xl flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6">{{ $v['icon'] }}</div>
+            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6" style="color:rgb(79,142,255);">{!! $v['icon'] !!}</div>
             <h3 class="font-syne font-bold text-base sm:text-lg tracking-tight mb-2 sm:mb-3">{{ $v['title'] }}</h3>
             <p class="text-muted text-xs sm:text-sm leading-relaxed">{{ $v['desc'] }}</p>
         </div>
@@ -222,10 +226,19 @@
         </p>
 
         <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10">
-            @foreach([['🚀','Landing Page'],['🏢','Corporate Website'],['🛒','E-Commerce'],['⚙️','System Development']] as [$icon, $label])
+            @php
+            $ctaOptions = [
+                ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M7 13h10M7 16h6"/></svg>', 'Landing Page', '0,212,170'],
+                ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4a1 1 0 011-1h6a1 1 0 011 1v17"/><path d="M14 21v-8h4a1 1 0 011 1v7"/><path d="M3 21h18"/><path d="M9 7h.01M9 10h.01M9 13h.01M9 16h.01"/></svg>', 'Corporate Website', '0,212,170'],
+                ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>', 'E-Commerce', '0,212,170'],
+                ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><path d="M12 2.5v3M12 18.5v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2.5 12h3M18.5 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>', 'System Development', '79,142,255'],
+            ];
+            @endphp
+            @foreach($ctaOptions as [$icon, $label, $color])
             <button type="button" class="about-pill flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border text-xs sm:text-sm font-medium transition-all duration-200"
                 style="border-color:rgba(255,255,255,0.07); color:#6b7280; background:#131720;">
-                <span>{{ $icon }}</span><span>{{ $label }}</span>
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full flex-shrink-0" style="background: rgba({{ $color }},0.15); color: rgb({{ $color }});">{!! $icon !!}</span>
+                <span>{{ $label }}</span>
             </button>
             @endforeach
         </div>

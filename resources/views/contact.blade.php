@@ -53,14 +53,14 @@
             <div class="flex flex-col gap-3 sm:gap-4 mb-8 sm:mb-10">
                 @php
                 $contacts = [
-                    ['icon' => '📧', 'label' => 'Email',    'value' => 'team@skyinfers.com',   'href' => 'mailto:team@skyinfers.com'],
-                    ['icon' => '💬', 'label' => 'WhatsApp', 'value' => '+60 11-3952 8542',        'href' => 'https://wa.me/601139528542'],
-                    ['icon' => '📍', 'label' => 'Location', 'value' => 'Johor Bahru, Malaysia', 'href' => null],
+                    ['icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>', 'label' => 'Email',    'value' => 'team@skyinfers.com',   'href' => 'mailto:team@skyinfers.com'],
+                    ['icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 01-8.5 8.5 8.4 8.4 0 01-4-1L3 20l1-4.5a8.4 8.4 0 01-1-4A8.5 8.5 0 1121 11.5z"/></svg>', 'label' => 'WhatsApp', 'value' => '+60 11-3952 8542',        'href' => 'https://wa.me/601139528542'],
+                    ['icon' => '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.5 7-12.5a7 7 0 10-14 0C5 14.5 12 22 12 22z"/><circle cx="12" cy="9.5" r="2.3"/></svg>', 'label' => 'Location', 'value' => 'Johor Bahru, Malaysia', 'href' => null],
                 ];
                 @endphp
                 @foreach($contacts as $c)
                 <div class="flex items-center gap-3 sm:gap-4 bg-surface border border-white/[0.07] rounded-xl sm:rounded-2xl px-4 sm:px-6 py-4 sm:py-5 hover:border-accent/25 transition-all duration-300">
-                    <div class="w-10 h-10 sm:w-11 sm:h-11 bg-accent/10 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl flex-shrink-0">{{ $c['icon'] }}</div>
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 bg-accent/10 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0" style="color:rgb(79,142,255);">{!! $c['icon'] !!}</div>
                     <div>
                         <div class="text-xs text-muted font-semibold tracking-widest uppercase mb-0.5">{{ $c['label'] }}</div>
                         @if($c['href'])
@@ -120,10 +120,19 @@
                 <div>
                     <label class="text-xs font-semibold tracking-widest uppercase text-muted mb-1.5 sm:mb-2 block">I'm interested in</label>
                     <div class="flex flex-wrap gap-2" id="contactServices">
-                        @foreach([['🚀','Landing Page'],['🏢','Corporate Website'],['🛒','E-Commerce'],['⚙️','System Development']] as [$icon, $label])
+                        @php
+                        $ctaOptions = [
+                            ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M7 13h10M7 16h6"/></svg>', 'Landing Page', '0,212,170'],
+                            ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4a1 1 0 011-1h6a1 1 0 011 1v17"/><path d="M14 21v-8h4a1 1 0 011 1v7"/><path d="M3 21h18"/><path d="M9 7h.01M9 10h.01M9 13h.01M9 16h.01"/></svg>', 'Corporate Website', '0,212,170'],
+                            ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>', 'E-Commerce', '0,212,170'],
+                            ['<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5"/><path d="M12 2.5v3M12 18.5v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2.5 12h3M18.5 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>', 'System Development', '79,142,255'],
+                        ];
+                        @endphp
+                        @foreach($ctaOptions as [$icon, $label, $color])
                         <button type="button" class="contact-pill flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-3 rounded-full border text-xs font-medium transition-all duration-200"
                             style="border-color:rgba(255,255,255,0.07); color:#6b7280; background:#0d1117;">
-                            <span>{{ $icon }}</span><span>{{ $label }}</span>
+                            <span class="inline-flex items-center justify-center w-5 h-5 rounded-full flex-shrink-0" style="background: rgba({{ $color }},0.15); color: rgb({{ $color }});">{!! $icon !!}</span>
+                            <span>{{ $label }}</span>
                         </button>
                         @endforeach
                     </div>
