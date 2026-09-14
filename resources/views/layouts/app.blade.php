@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- Primary SEO --}}
-    <title>@yield('title', 'SkyInfers — Web Design & System Development | Johor Bahru, Malaysia')</title>
+    <title>@yield('title', 'SkyInfers - Web Design & System Development | Johor Bahru, Malaysia')</title>
     <meta name="description" content="@yield('description', 'SkyInfers is a web design and system development agency in Johor Bahru, Malaysia. We build stunning websites and custom systems that help businesses grow online.')">
     <meta name="keywords"    content="@yield('keywords', 'web design johor bahru, system development malaysia, laravel developer malaysia, corporate website johor bahru, e-commerce website malaysia, skyinfers')">
     <meta name="author"      content="SkyInfers">
